@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="/fragments/front/common :: headSrc('온라인 우표전시회 홈')">
+<head th:replace="fragments/front/common :: headSrc('온라인 우표전시회 홈')">
     
 </head>
 
 <body class="stretched" data-menu-breakpoint="1200">
 
     <div id="wrapper">
-        <header id="header" class="transparent-header dark" th:replace="/fragments/front/common :: headMenu('index')">
+        <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('index')">
          
         </header>
 
@@ -1518,10 +1518,10 @@
                 </div>
             </div>
         </div>
-        <th:block th:replace="/fragments/front/common :: footerSrc"></th:block>
+        <th:block th:replace="fragments/front/common :: footerSrc"></th:block>
     </div>
 
-	<th:block th:replace="/fragments/front/common :: scriptSrc"></th:block>
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
