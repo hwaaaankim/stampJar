@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="headSrc(title)">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="author" content="#">
+<meta name="description" content="#">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/e5334cc6a1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/css/swiper.min.css" />
+<link rel="stylesheet" href="https://use.typekit.net/hok5sht.css">
+<link rel="stylesheet" href="/front/style.css">
+<link rel="stylesheet" href="/front/css/font-icons.css">
+<link rel="stylesheet" href="/front/css/swiper.css">
+<link rel="stylesheet" href="/front/css/custom.css">
+<link rel="stylesheet" href="/front/detail.css">
+<link rel="stylesheet" href="/front/svg.css">
+<link rel="stylesheet" href="/front/css/components/datepicker.css">
+<title th:text="${title}">온라인전시회</title>
+
+</head>
+
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		<header id="header" class="transparent-header" th:fragment="headMenu(code)" th:classappend="${code != 'white'} ? 'dark' : ''"
+			th:attr="data-responsive-class=${code != 'index' ? 'not-dark' : ''} , data-sticky-class=${code != 'index' ? 'not-dark' : ''}">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<div id="logo" class="me-5">
+							<a href="/index"> <img class="logo-default"
+								src="/front/images/new/logo-default.png" alt="Logo"> <img
+								class="logo-dark" src="/front/images/new/logo.png"
+								alt="Canvas Logo">
+							</a>
+						</div>
+
+						<div class="header-misc ms-auto ms-xl-0">
+							<a href=""
+								class="button button-border border-contrast-900 text-contrast-900 h-text-light button-shadow button-shadow-contrast rounded-1 px-3 px-lg-4 me-3 me-xl-0"><i
+								class="bi-image d-block d-md-none me-1"></i><span
+								class="d-none d-md-block">전시회 구경하기</span></a>
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button"
+								title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span
+									class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<nav class="primary-menu flex-xl-fill me-auto">
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="#">
+										<div>홈</div>
+								</a></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>행사안내</div>
+								</a> <th:block th:replace="/fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>관람안내</div>
+								</a> <th:block th:replace="/fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>우수작품전시</div>
+								</a> <th:block th:replace="/fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>이벤트</div>
+								</a> <th:block th:replace="/fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>알립니다</div>
+								</a> <th:block th:replace="/fragments/front/common :: headDetail"></li>
+								<li class="menu-item"><a class="menu-link" href="#">
+										<div>YOUTUBE</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="#">
+										<div>
+											SNS방문<i
+												class="bi-caret-down-fill text-smaller d-none d-xl-inline-block me-0"></i>
+										</div>
+								</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#">
+												<div>
+													<i class="bi-arrow-repeat"></i>SNS01
+												</div>
+										</a></li>
+										<li class="menu-item"><a class="menu-link" href="#">
+												<div>
+													<i class="bi-file-earmark-text"></i>SNS02
+												</div>
+										</a></li>
+										<li class="menu-item"><a class="menu-link" href="#">
+												<div>
+													<i class="bi-file-earmark-text"></i>SNS03
+												</div>
+										</a></li>
+									</ul></li>
+								<li class="menu-item ms-auto"><a class="menu-link" href="#">
+										<div>
+											HELP<i
+												class="bi-caret-down-fill text-smaller d-none d-xl-inline-block me-0"></i>
+										</div>
+								</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#">
+												<div>
+													<i class="bi-arrow-repeat"></i>언어 지원
+												</div>
+										</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="">
+														<div>
+															<i class="bi-translate"></i>ENGLISH
+														</div>
+												</a></li>
+												<li class="menu-item"><a class="menu-link" href="">
+														<div>
+															<i class="bi-translate"></i>JAPANESE
+														</div>
+												</a></li>
+												<li class="menu-item"><a class="menu-link" href="">
+														<div>
+															<i class="bi-translate"></i>CHINESE
+														</div>
+												</a></li>
+											</ul></li>
+										<li class="menu-item"><a class="menu-link" href="/private">
+												<div>
+													<i class="bi-file-earmark-text"></i>개인정보 처리방침
+												</div>
+										</a></li>
+										<li class="menu-item">
+											<a class="menu-link" href="/policy">
+												<div>
+													<i class="bi-file-earmark-text"></i>이용 약관
+												</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header>
+
+		<th:block th:fragment="footerSrc">
+			<footer id="footer" class="dark">
+
+				<div id="copyrights">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="col-md-7 col-12 text-center text-md-start">
+
+								<div class="copyright-links">
+									<a href="#">업체명</a> / <a href="#">주소 (본사|지사)</a> / <a href="#">전화번호</a>
+									/ <a href="#">팩스</a> / <a href="#">사업자등록번호</a> / <a href="#">개인정보보호정책</a>
+									/ <a href="#">이메일무단수집거부</a>
+								</div>
+								Copyrights &copy; 2023 All Rights Reserved by 한국우편사업진흥원
+							</div>
+
+							<div class="col-md-5 col-12 text-center text-md-end">
+								<i class="bi-envelope"></i> email@email.com <span class="middot">&middot;</span>
+								<i class="fa-solid fa-phone"></i> 010-1234-1234 <span
+									class="middot">&middot;</span> <i class="bi-skype"></i> 한국우편사업진흥원
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</th:block>
+	</div>
+	<th:block th:fragment="headDetail">
+		<div class="mega-menu-content mega-menu-style-2 border-0 rounded">
+			<div class="container">
+				<div class="row">
+					<ul
+						class="sub-menu-container mega-menu-column col-lg-3 dark bg-cover bg-center bg-overlay-mask rounded-start overflow-hidden"
+						style="background-image: url(/front/images/new/bg/con1.png); --cnvs-bg-overlay-mask-opacity: 0.65;">
+						<li class="menu-item">
+							<div class="widget px-3">
+								<p class="mb-0">온라인 우표전시회를 통해 따뜻한 동화 그리고 영롱한 전설, 교감있는 대화까지
+									함께 즐겨보세요.</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col border-start-0">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>전시회 안내</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/intro/opening">
+										<div>
+											<i class="bi-play-circle"></i>오프닝 세션
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/intro/introduction">
+										<div>
+											<i class="bi-card-heading"></i>전시회 소개
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/intro/symbol">
+										<div>
+											<i class="bi-card-heading"></i>전시회 상징
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/intro/history">
+										<div>
+											<i class="bi-blockquote-left"></i>역대 전시회
+										</div>
+								</a></li>
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>관람안내</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/information/introduction">
+										<div>
+											<i class="bi-exclamation-circle"></i>관람안내
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/information/program">
+										<div>
+											<i class="bi-list-stars"></i>프로그램
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/information/contact">
+										<div>
+											<i class="bi-bell"></i>찾아오시는 길
+										</div>
+								</a></li>
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>우수작품전시</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/contest/excellent">
+										<div>
+											<i class="bi-geo-fill"></i>우수작 전시
+										</div>
+								</a>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="/contest/excellentDetail">
+										<div>
+											<i class="bi-geo-fill"></i>우수작 상세
+										</div>
+								</a>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="/contest/normal">
+										<div>
+											<i class="bi-geo-fill"></i>일반수상작 전시
+										</div>
+								</a>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="/contest/normalDetail">
+										<div>
+											<i class="bi-geo-fill"></i>일반수상작 상세
+										</div>
+								</a>
+								</li>
+
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>이벤트</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/event/eventOne">
+										<div>
+											<i class="bi-calendar-week"></i>이벤트 안내
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/event/eventTwo">
+										<div>
+											<i class="bi-calendar-week"></i>추가 이벤트 01
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/event/eventThree">
+										<div>
+											<i class="bi-calendar-week"></i>추가 이벤트 02
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/event/prize">
+										<div>
+											<i class="bi-geo-fill"></i>당첨자 발표
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/event/comment">
+										<div>
+											<i class="bi-ui-checks"></i>만족도 조사
+										</div>
+								</a></li>
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>알립니다</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/notice/content">
+										<div>
+											<i class="bi-table"></i>공지시항
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/notice/press">
+										<div>
+											<i class="bi-card-heading"></i>보도자료
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/notice/gallery">
+										<div>
+											<i class="bi-image"></i>사진영상
+										</div>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</th:block>
+
+	<th:block th:fragment="scriptSrc">
+		<div id="gotoTop" class="uil uil-angle-up"></div>
+		<script src="/front/js/functions.js"></script>
+	</th:block>
+
+
+</body>
+
+</html>
