@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="/fragments/front/common :: headSrc('우수작 전시 페이지')">
+<head th:replace="fragments/front/common :: headSrc('우수작 전시 페이지')">
     
 </head>
 <body class="stretched" data-menu-breakpoint="1200">
 
 	<div id="wrapper">
-		 <header id="header" class="transparent-header dark" th:replace="/fragments/front/common :: headMenu('exellent')">
+		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('exellent')">
          
         </header>
 		<section class="page-title dark page-title-center page-title-parallax parallax include-header py-6">
@@ -483,11 +483,11 @@
 			</div>
 		</section>
 
-		<th:block th:replace="/fragments/front/common :: footerSrc"></th:block>
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
 
 	</div>
 
-	<th:block th:replace="/fragments/front/common :: scriptSrc"></th:block>
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
 	<script src="/front/js/components/datepicker.js"></script>
 
 	<script>

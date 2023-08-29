@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="/fragments/front/common :: headSrc('우수작 전시 페이지')">
+<head th:replace="fragments/front/common :: headSrc('우수작 전시 페이지')">
 
 </head>
 <body class="stretched" data-menu-breakpoint="1200">
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 		<header id="header" class="transparent-header dark"
-			th:replace="/fragments/front/common :: headMenu('white')"> </header>
+			th:replace="fragments/front/common :: headMenu('white')"> </header>
 		<section
 			class="page-title dark bg-transparent page-title-parallax parallax border-0">
 			<img src="/front/images/new/bg01.jpg" class="parallax-bg">
@@ -231,11 +231,11 @@
 			</div>
 		</section>
 
-		<th:block th:replace="/fragments/front/common :: footerSrc"></th:block>
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
 
 	</div>
 
-	<th:block th:replace="/fragments/front/common :: scriptSrc"></th:block>
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
 	<script>
