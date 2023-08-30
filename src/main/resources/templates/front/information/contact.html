@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('우수작 전시 페이지')">
+
+</head>
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		<header id="header" class="transparent-header dark"
+			th:replace="fragments/front/common :: headMenu('white')"> </header>
+		<section
+			class="page-title dark bg-transparent page-title-parallax parallax border-0">
+			<img src="/front/images/new/bg01.jpg" class="parallax-bg">
+			<div class="container">
+				<div class="page-title-row pt-5 pb-3">
+
+					<div class="page-title-content">
+						<span class="color fw-medium my-0">2023 ONLINE STAMP
+							CONTEST</span>
+						<h1>
+							<div class="fw-bold display-5 nocolor">온라인전시회 오프닝</div>
+						</h1>
+						<span class="fw-light" style="max-width: 40rem;">오프닝에 대한
+							간단한 인사문구 영역 입니다.</span>
+
+						<div class="mt-4 pt-3">
+							<a href="#" class="button rounded-2 ms-0 mb-0">전시회 소개</a> <a
+								href="#"
+								class="button rounded-2 h-bg-light button-light button-border border-2 me-0 mb-0">역대
+								전시회 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a> <a href="#"
+								class="button rounded-2 h-bg-light button-light button-border border-2 me-0 mb-0">전시회
+								상징 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+						</div>
+					</div>
+
+					<nav aria-label="breadcrumb" class="d-none d-lg-block">
+						<ol class="breadcrumb"
+							style="-bs-breadcrumb-divider: '&amp;#62;';">
+							<li class="breadcrumb-item"><a href="#"><i
+									class="uil uil-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#">Templates</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Page
+								Titles</li>
+						</ol>
+					</nav>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container mt-5 mb-10">
+					<div class="title-block">
+						<h1>전시회 오프닝 멘트</h1>
+						<span># 다시 찾는 희망, 2023 대한민국 우표전시회.</span> <span># 우표, 지속가능한
+							세상을 말하다.</span>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row" style="justify-content:space-between;">
+						<div class="col-md-3">
+							<ul
+								class="nav canvas-alt-tabs2 canvas-tabs py-0 tabs nav-pills flex-column mb-3 border-0"
+								id="canvas-side-tab-alt" role="tablist">
+								<li class="nav-item mb-2" role="presentation">
+									<button class="nav-link active" id="canvas-home-tab-side-alt"
+										data-bs-toggle="pill" data-bs-target="#home-side-alt"
+										type="button" role="tab" aria-controls="canvas-home-side-alt"
+										aria-selected="true">주차장 가는길</button>
+								</li>
+								<li class="nav-item mb-2" role="presentation">
+									<button class="nav-link" id="canvas-profile-tab-side-alt"
+										data-bs-toggle="pill" data-bs-target="#profile-side-alt"
+										type="button" role="tab"
+										aria-controls="canvas-profile-side-alt" aria-selected="false">전시관 가는길</button>
+								</li>
+								<li class="nav-item mb-2" role="presentation">
+									<button class="nav-link" id="canvas-contact-tab-side-alt"
+										data-bs-toggle="pill" data-bs-target="#contact-side-alt"
+										type="button" role="tab"
+										aria-controls="canvas-contact-side-alt" aria-selected="false">대중교통 이용시</button>
+								</li>
+							</ul>
+							<div class="contact-wrap">
+								<div class="contact-content">
+									<div class="contact-map">
+										<i class="uil uil-map-marker-question"></i>
+										<p>서울특별시 종로구 세종대로 175 (세종로)</p>
+										<p>세종문화회관 (우)03172</p>
+									</div>
+									<div class="contact-call">
+										<i class="uil uil-phone"></i>
+										<p>02-399-1000(오전 9시 ~ 오후 8시)</p>
+									</div>
+									<div class="contact-subcontent">
+										<i class="bi-question-diamond"></i>
+										<p>대중교통 정보는 변경될 수 있으니 </p>
+										<p>아래의 포털사이트를 통해 </p>
+										<p>정확한 정보를 확인하시기 바랍니다. </p>
+									</div>
+									<div class="contact-map-link">
+										<i class="uil uil-link"></i>
+										<div class="map-box mt-0">
+											<a href="#" style="width:100%;" class="button button-reveal button-large button-border text-center"><span>NAVER</span><i class="bi-arrow-right-square"></i></a>
+											<a href="#" style="width:100%;" class="button button-reveal button-large button-border text-center"><span>DAUM</span><i class="bi-arrow-right-square"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div id="canvas-side-tab-content" class="tab-content">
+								<div class="tab-pane fade show active" id="home-side-alt"
+									role="tabpanel" aria-labelledby="canvas-home-tab-side-alt"
+									tabindex="0">
+									
+								</div>
+								<div class="tab-pane fade" id="profile-side-alt" role="tabpanel"
+									aria-labelledby="canvas-profile-tab-side-alt" tabindex="0">
+									
+								</div>
+								<div class="tab-pane fade" id="contact-side-alt" role="tabpanel"
+									aria-labelledby="canvas-contact-tab-side-alt" tabindex="0">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+	</div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+</body>
+</html>

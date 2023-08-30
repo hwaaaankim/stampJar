@@ -3980,7 +3980,7 @@ fieldset:disabled .btn {
   --bs-nav-pills-link-active-bg: #0d6efd;
 }
 .nav-pills .nav-link {
-  border-radius: var(--bs-nav-pills-border-radius);
+  border-radius: none;
 }
 .nav-pills .nav-link:disabled {
   color: var(--bs-nav-link-disabled-color);
@@ -22345,7 +22345,8 @@ td.actions {
   display: block;
   position: absolute;
   top: 0;
-  left: -32px;
+  right: -32px;
+  left:auto;
   width: 32px;
   height: 100%;
   display: -ms-flexbox;
@@ -22356,7 +22357,6 @@ td.actions {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .button.button-reveal.button-border i {
-  top: -2px;
   height: calc(100% + var(--cnvs-btn-border-width) * 2);
 }
 .button.button-reveal.text-end i {
@@ -22441,7 +22441,7 @@ td.actions {
   left: -22px;
 }
 .button.button-reveal:hover i {
-  left: 0;
+  right: 10px;
 }
 .button.button-reveal.text-end:hover i {
   left: auto;
