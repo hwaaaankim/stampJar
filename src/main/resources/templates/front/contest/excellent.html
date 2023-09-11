@@ -63,24 +63,24 @@
 														<label>부문별 검색 : </label>
 														<select class="form-select border-form-control" name="subject">
 															<option value="all" selected="selected">전체보기 </option>
-															<option value="우취">어린이</option>
-															<option value="전통우취">전통우취</option>
-															<option value="열린우취">열린우취</option>
-															<option value="우편사">우편사</option>
-															<option value="테마틱우취">테마틱우취</option>
-															<option value="현대우취">현대우취</option>
-															<option value="관광인-주제">관광인-주제</option>
-															<option value="청소년A">청소년A</option>
-															<option value="한틀-전통">한틀-전통</option>
-															<option value="한틀-테마틱">한틀-테마틱</option>
-															<option value="청소년B">청소년B</option>
-															<option value="도안별수집">도안별수집</option>
-															<option value="맥시머필리">맥시머필리</option>
-															<option value="한틀-관광인">한틀-관광인</option>
-															<option value="그림엽서">그림엽서</option>
-															<option value="우취문헌">우취문헌</option>
-															<option value="한국우표">한국우표</option>
-															<option value="관광인-우편사">관광인-우편사</option>
+															<option th:selected="${subject} == '우취'" value="우취">어린이</option>
+															<option th:selected="${subject} == '전통우취'" value="전통우취">전통우취</option>
+															<option th:selected="${subject} == '열린우취'" value="열린우취">열린우취</option>
+															<option th:selected="${subject} == '우편사'" value="우편사">우편사</option>
+															<option th:selected="${subject} == '테마틱우취'" value="테마틱우취">테마틱우취</option>
+															<option th:selected="${subject} == '현대우취'" value="현대우취">현대우취</option>
+															<option th:selected="${subject} == '관광인-주제'" value="관광인-주제">관광인-주제</option>
+															<option th:selected="${subject} == '청소년A'" value="청소년A">청소년A</option>
+															<option th:selected="${subject} == '한틀-전통'" value="한틀-전통">한틀-전통</option>
+															<option th:selected="${subject} == '한틀-테마틱'" value="한틀-테마틱">한틀-테마틱</option>
+															<option th:selected="${subject} == '청소년B'" value="청소년B">청소년B</option>
+															<option th:selected="${subject} == '도안별수집'" value="도안별수집">도안별수집</option>
+															<option th:selected="${subject} == '맥시머필리'" value="맥시머필리">맥시머필리</option>
+															<option th:selected="${subject} == '한틀-관광인'" value="한틀-관광인">한틀-관광인</option>
+															<option th:selected="${subject} == '그림엽서'" value="그림엽서">그림엽서</option>
+															<option th:selected="${subject} == '우취문헌'" value="우취문헌">우취문헌</option>
+															<option th:selected="${subject} == '한국우표'" value="한국우표">한국우표</option>
+															<option th:selected="${subject} == '관광인-우편사'" value="관광인-우편사">관광인-우편사</option>
 														</select>
 													</div>
 												</div>
@@ -89,15 +89,15 @@
 														<label>검색 조건 설정 : </label>
 														<select class="form-select border-form-control" name="searchType">
 															<option value="">검색 조건 설정</option>
-															<option value="name">제목 검색</option>
-															<option value="author">작가별 검색</option>
+															<option th:selected="${searchType} == 'name'" value="name">제목 검색</option>
+															<option th:selected="${searchType} == 'author'" value="author">작가별 검색</option>
 														</select>
 													</div>
 												</div>
 												
 												<div class="col-3">
 													<label>검색어 입력 : </label>
-													<input type="text" name="searchWord" value=""
+													<input type="text" name="searchWord" th:value="${searchWord}"
 													 class="form-control border-form-control" placeholder="검색어 입력 후 검색 버튼을 클릭 해 주세요.">
 												</div>
 												<div class="col-2">
@@ -150,30 +150,30 @@
 						  <li class="page-item"
 								th:classappend="${1 == exhibitions.pageable.pageNumber+1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=0, size=${param.size})}"
+								th:href="@{/contest/excellent(page=0, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}"
 								tabindex="-1" aria-disabled="true">First</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${1 == exhibitions.pageable.pageNumber+1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber - 1}, size=${param.size})}"
+								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber - 1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}"
 								tabindex="-1" aria-disabled="true">Previous</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${i == exhibitions.pageable.pageNumber+1} ? 'disabled'"
 								th:each="i : ${#numbers.sequence(startPage, endPage)}">
 								<a	class="page-link" href="#" th:text=${i}
-								th:href="@{/contest/excellent(page=${i-1}, size=${param.size})}">1</a>
+								th:href="@{/contest/excellent(page=${i-1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">1</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${exhibitions.totalPages == exhibitions.pageable.pageNumber + 1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber + 1}, size=${param.size})}">Next</a>
+								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber + 1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">Next</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${exhibitions.totalPages == exhibitions.pageable.pageNumber + 1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=${exhibitions.totalPages-1}, size=${param.size})}">Last</a>
+								th:href="@{/contest/excellent(page=${exhibitions.totalPages-1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">Last</a>
 							</li>
 						</ul>
 					</div>

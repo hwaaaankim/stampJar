@@ -49,9 +49,9 @@ public class ContestController {
 			
 		}else if(!"all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
 			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndSortAndNameContaining(pageable, subject, searchWord, true);
+				exhibitions = exhibitionRepository.findAllBySubjectAndNameContainingAndSort(pageable, subject, searchWord, true);
 			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndSortAndAuthorContaining(pageable, subject, searchWord, true);
+				exhibitions = exhibitionRepository.findAllBySubjectAndAuthorContainingAndSort(pageable, subject, searchWord, true);
 			}
 		}else if("all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
 			if("name".equals(searchType)) {
@@ -81,6 +81,9 @@ public class ContestController {
 		
 		int startPage = Math.max(1, exhibitions.getPageable().getPageNumber() - 4);
 		int endPage = Math.min(exhibitions.getTotalPages(), exhibitions.getPageable().getPageNumber() + 4);
+		model.addAttribute("subject", subject);
+		model.addAttribute("searchType", searchType);
+		model.addAttribute("searchWord", searchWord);
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);
 		model.addAttribute("exhibitions", exhibitions);
@@ -132,9 +135,9 @@ public class ContestController {
 			
 		}else if(!"all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
 			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndSortAndNameContaining(pageable, subject, searchWord, false);
+				exhibitions = exhibitionRepository.findAllBySubjectAndNameContainingAndSort(pageable, subject, searchWord, false);
 			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndSortAndAuthorContaining(pageable, subject, searchWord, false);
+				exhibitions = exhibitionRepository.findAllBySubjectAndAuthorContainingAndSort(pageable, subject, searchWord, false);
 			}
 		}else if("all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
 			if("name".equals(searchType)) {
@@ -164,6 +167,9 @@ public class ContestController {
 		
 		int startPage = Math.max(1, exhibitions.getPageable().getPageNumber() - 4);
 		int endPage = Math.min(exhibitions.getTotalPages(), exhibitions.getPageable().getPageNumber() + 4);
+		model.addAttribute("subject", subject);
+		model.addAttribute("searchType", searchType);
+		model.addAttribute("searchWord", searchWord);
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);
 		model.addAttribute("exhibitions", exhibitions);
