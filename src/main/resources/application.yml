@@ -10,7 +10,7 @@ logging:
 # 동작 환경 설정
 spring:
   profiles:
-    active: test
+    active: prod
 server:
   servlet:
     session:
