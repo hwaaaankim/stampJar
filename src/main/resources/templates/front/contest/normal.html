@@ -151,30 +151,30 @@
 						  <li class="page-item"
 								th:classappend="${1 == exhibitions.pageable.pageNumber+1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=0, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}"
+								th:href="@{/contest/normal(page=0, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}"
 								tabindex="-1" aria-disabled="true">First</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${1 == exhibitions.pageable.pageNumber+1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber - 1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}"
+								th:href="@{/contest/normal(page=${exhibitions.pageable.pageNumber - 1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}"
 								tabindex="-1" aria-disabled="true">Previous</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${i == exhibitions.pageable.pageNumber+1} ? 'disabled'"
 								th:each="i : ${#numbers.sequence(startPage, endPage)}">
 								<a	class="page-link" href="#" th:text=${i}
-								th:href="@{/contest/excellent(page=${i-1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">1</a>
+								th:href="@{/contest/normal(page=${i-1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">1</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${exhibitions.totalPages == exhibitions.pageable.pageNumber + 1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber + 1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">Next</a>
+								th:href="@{/contest/normal(page=${exhibitions.pageable.pageNumber + 1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">Next</a>
 							</li>
 							<li class="page-item"
 								th:classappend="${exhibitions.totalPages == exhibitions.pageable.pageNumber + 1} ? 'disabled'">
 								<a class="page-link" href="#"
-								th:href="@{/contest/excellent(page=${exhibitions.totalPages-1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">Last</a>
+								th:href="@{/contest/normal(page=${exhibitions.totalPages-1}, size=${param.size}, subject=${subject}, searchType=${searchType}, searchWord=${searchWord})}">Last</a>
 							</li>
 						</ul>
 					</div>
