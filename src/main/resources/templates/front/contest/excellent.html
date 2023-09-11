@@ -40,64 +40,77 @@
 				<div class="container">
 					<div class="card search-form-card">
 						<div class="card-body" style="padding:20px">
-							<div class="form-widget" data-alert-type="inline">
 
-								<form id="booking-registration" class="row mb-0" action="#" method="post" enctype="multipart/form-data">
+								<form class="row mb-0" th:action="@{/contest/excellent}" method="POST">
 
 									<div class="col-lg-12 mt-4 mt-lg-0">
 										<div class="tab-content" id="nav-tabContent">
 
-											<div class="tab-pane fade show active" id="tab-reservation-select-dates" role="tabpanel" aria-labelledby="tab-reservation-select-dates">
+											<div class="tab-pane fade show active"role="tabpanel" aria-labelledby="tab-reservation-select-dates">
 												<div class="row">
 													<div class="col-2">
 														<div class="mb-4">
 															<label>게시물 수 설정 : </label>
-															<select class="form-select border-form-control required" name="booking-registration-persons" id="booking-registration-persons">
-																<option value="1 Person" selected="selected">12개씩 보기</option>
-																<option value="2 Persons">20개씩 보기</option>
-																<option value="3 Persons">40개씩 보기</option>
+															<select class="form-select border-form-control" th:name="size">
+																<option th:value="12" th:selected="${exhibitions.pageable.pageSize}=='12'">기본</option>
+																<option th:value="30" th:selected="${exhibitions.pageable.pageSize}=='30'">30개씩 보기</option>
+																<option th:value="60" th:selected="${exhibitions.pageable.pageSize}=='60'">60개씩 보기</option>
+																<option th:value="90" th:selected="${exhibitions.pageable.pageSize}=='90'">90개씩 보기</option>
 															</select>
 														</div>
 													</div>
 													<div class="col-2">
 														<div class="mb-4">
-															<label>게시물 열 설정 : </label>
-															<select class="form-select border-form-control required" name="booking-registration-persons" id="booking-registration-persons">
-																<option value="#" selected="selected">1열로 보기</option>
-																<option value="#">2열로 보기</option>
-																<option value="#">4열로 보기</option>
+															<label>부문별 검색 : </label>
+															<select class="form-select border-form-control" name="subject">
+																<option value="all" selected="selected">전체보기 </option>
+																<option value="우취">어린이</option>
+																<option value="전통우취">전통우취</option>
+																<option value="열린우취">열린우취</option>
+																<option value="우편사">우편사</option>
+																<option value="테마틱우취">테마틱우취</option>
+																<option value="현대우취">현대우취</option>
+																<option value="관광인-주제">관광인-주제</option>
+																<option value="청소년A">청소년A</option>
+																<option value="한틀-전통">한틀-전통</option>
+																<option value="한틀-테마틱">한틀-테마틱</option>
+																<option value="청소년B">청소년B</option>
+																<option value="도안별수집">도안별수집</option>
+																<option value="맥시머필리">맥시머필리</option>
+																<option value="한틀-관광인">한틀-관광인</option>
+																<option value="그림엽서">그림엽서</option>
+																<option value="우취문헌">우취문헌</option>
+																<option value="한국우표">한국우표</option>
+																<option value="관광인-우편사">관광인-우편사</option>
 															</select>
 														</div>
 													</div>
-													<div class="col-2">
+													<div class="col-3">
 														<div class="mb-4">
 															<label>검색 조건 설정 : </label>
-															<select class="form-select border-form-control required" name="booking-registration-rooms" id="booking-registration-rooms">
-																<option value="#" selected="selected">주제별 검색</option>
-																<option value="#">제목 검색</option>
-																<option value="#">작가별 검색</option>
-																<option value="#">지역별 검색</option>
+															<select class="form-select border-form-control" name="searchType">
+																<option value="">검색 조건 설정</option>
+																<option value="name">제목 검색</option>
+																<option value="author">작가별 검색</option>
 															</select>
 														</div>
 													</div>
-
 													
-													<div class="col-4">
+													<div class="col-3">
 														<label>검색어 입력 : </label>
-														<input type="text" name="booking-registration-first-name"
-														 id="booking-registration-first-name"
-														 class="form-control border-form-control required" 
-														 value="" placeholder="검색어 입력 후 검색 버튼을 클릭 해 주세요.">
+														<input type="text" name="searchWord" value=""
+														 class="form-control border-form-control" placeholder="검색어 입력 후 검색 버튼을 클릭 해 주세요.">
 													</div>
 													<div class="col-2">
-														<a href="#" style="width:100%;" class="search-btn button button-reveal button-middle button-white button-light text-center"><i class="bi-arrow-right"></i><span>검색</span></a>
+														<button type="submit"
+														 style="width:100%;" 
+														 class="search-btn button button-middle button-white button-light text-center">검색</button>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -106,377 +119,63 @@
 			<div class="container divider divider-border divider-center"><i class="bi-send"></i></div>
 			<div class="content-wrap pt-0">
 				<div class="container">
-					<div id="portfolio" class="portfolio row grid-container gutter-20" data-layout="fitRows">
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+					<div class="portfolio row grid-container gutter-20"  data-layout="fitRows">
+						<article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12" th:each="e:${exhibitions}">
 							<div class="grid-inner">
 								<div class="portfolio-image">
 									<div class="fslider" data-arrows="false">
 										<div class="flexslider">
 											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
+												<div class="slide" th:each="i:${e.slideImages}"><a href=""><img th:src="@{${i}}" alt="전시회 작품 대표이미지"></a></div>
 											</div>
 										</div>
 									</div>
 									<div class="bg-overlay" data-lightbox="gallery">
 										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
+											<a th:href="${e.firstImage}" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
+											<a th:each="x : ${e.slideImages}" th:href="${x}" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
 										</div>
 										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
 									</div>
 								</div>
 								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="portfolio-single-gallery.html"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single-gallery.html">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
-								</div>
-							</div>
-						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide"><a href="#"><img src="/front/images/new/sample/1.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="#"><img src="/front/images/new/sample/2.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="#"><img src="/front/images/new/sample/3.png" alt="Shake It"></a></div>
-												<div class="slide"><a href="#"><img src="/front/images/new/sample/4.png" alt="Shake It"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-											<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="#">[출품자명]</a></h3>
-									<span><a href="#">[# 주제]</a>, <a href="#">[# 제목]</a></span>
+									<h3><a href="#"># [[${e.name}]]</a></h3>
+									<span><a href="#"># [[${e.author}]]</a> <a href="#"># [[${e.prizeName}]]</a> <a href="#"># [[${e.subject}]]</a></span>
 								</div>
 							</div>
 						</article>
 					</div>
 					<div class="pagination-wrap">
 						<ul class="pagination pagination-rounded pagination-3d">
-						  <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span></a></li>
-						  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-						  <li class="page-item"><a class="page-link" href="#">2</a></li>
-						  <li class="page-item"><a class="page-link" href="#">3</a></li>
-						  <li class="page-item"><a class="page-link" href="#">4</a></li>
-						  <li class="page-item"><a class="page-link" href="#">5</a></li>
-						  <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+						  <li class="page-item"
+								th:classappend="${1 == exhibitions.pageable.pageNumber+1} ? 'disabled'">
+								<a class="page-link" href="#"
+								th:href="@{/contest/excellent(page=0, size=${param.size})}"
+								tabindex="-1" aria-disabled="true">First</a>
+							</li>
+							<li class="page-item"
+								th:classappend="${1 == exhibitions.pageable.pageNumber+1} ? 'disabled'">
+								<a class="page-link" href="#"
+								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber - 1}, size=${param.size})}"
+								tabindex="-1" aria-disabled="true">Previous</a>
+							</li>
+							<li class="page-item"
+								th:classappend="${i == exhibitions.pageable.pageNumber+1} ? 'disabled'"
+								th:each="i : ${#numbers.sequence(startPage, endPage)}">
+								<a	class="page-link" href="#" th:text=${i}
+								th:href="@{/contest/excellent(page=${i-1}, size=${param.size})}">1</a>
+							</li>
+							<li class="page-item"
+								th:classappend="${exhibitions.totalPages == exhibitions.pageable.pageNumber + 1} ? 'disabled'">
+								<a class="page-link" href="#"
+								th:href="@{/contest/excellent(page=${exhibitions.pageable.pageNumber + 1}, size=${param.size})}">Next</a>
+							</li>
+							<li class="page-item"
+								th:classappend="${exhibitions.totalPages == exhibitions.pageable.pageNumber + 1} ? 'disabled'">
+								<a class="page-link" href="#"
+								th:href="@{/contest/excellent(page=${exhibitions.totalPages-1}, size=${param.size})}">Last</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -488,89 +187,8 @@
 	</div>
 
 	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="/front/js/components/datepicker.js"></script>
 
-	<script>
-		jQuery(document).ready( function(){
-			jQuery('.tab-action-btn-next').on( 'click', function(e) {
-				let elementTab = jQuery(this).parents('.tab-pane');
-				jQuery('#booking-registration').valid();
-				let errors = elementTab.find('.required.error').length;
-				if( errors > 0 ) {
-					jQuery('#tab-reservation > .active').nextAll('a').addClass('disabled');
-					return false;
-				} else {
-					jQuery('#tab-reservation > .active').next('a').removeClass('disabled').trigger('click');
-					let nextTabEl = jQuery('#tab-reservation > .active').next('a').removeClass('disabled'),
-						tab = new bootstrap.Tab( nextTabEl.get(0) );
-
-					tab.show();
-					e.preventDefault();
-					return false;
-				}
-			});
-
-			let date		= new Date(),
-				today		= new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1),
-				tomorrow	= new Date(date.getFullYear(), date.getMonth(), date.getDate() + 2),
-				checkIn		= jQuery( '#booking-registration-check-in' ),
-				checkOut	= jQuery( '#booking-registration-check-out' );
-
-			jQuery('.travel-date-group').datepicker({
-				autoclose: true,
-				todayHighlight: true,
-				startDate: "0 days",
-				format: "mm/dd/yyyy"
-			}).on('changeDate', function(){
-				let dayCheckin = new Date( checkIn.prop('value') ),
-					dayCheckout = new Date( checkOut.prop('value') ),
-					nights = ( dayCheckout.getTime() - dayCheckin.getTime() ) / (1000 * 3600 * 24);
-				jQuery( ".time-value" ).html( nights + ' Nights' );
-			});
-
-			jQuery('#booking-registration-card-exp').datepicker({
-				autoclose: true,
-				todayHighlight: true,
-				startDate: "0 days",
-				format: "mm/yyyy"
-			});
-
-			checkIn.datepicker( 'setDate', today );
-			checkOut.datepicker( 'setDate', tomorrow );
-
-			let elemRoomType	= 'Standard Room',
-				roomType		= jQuery( 'input[name="booking-registration-room-type"]' ),
-				elemRooms		= '',
-				rooms			= jQuery( 'select[name="booking-registration-rooms"]' ),
-				elempersons		= '',
-				persons			= jQuery( 'select[name="booking-registration-persons"]' );
-
-
-			roomType.change(function(){
-				elemRoomType = jQuery(this).prop('value');
-				jQuery( ".room-type-value" ).html( elemRoomType );
-			});
-
-			rooms.change(function(){
-				elemRooms = jQuery(this).prop('value');
-				jQuery( ".rooms-value" ).html( elemRooms );
-			});
-
-			persons.change(function(){
-				elempersons = jQuery(this).prop('value');
-				jQuery( ".persons-value" ).html( elempersons );
-			});
-
-			jQuery('#booking-registration').on( 'formSubmitSuccess', function(){
-				jQuery( '.travel-date-group input' ).datepicker( 'setDate', today );
-				jQuery( ".room-type-value" ).html( 'Standard Room' );
-				jQuery( ".time-value" ).html( 'Choose Date' );
-				jQuery( ".rooms-value" ).html( '1 Room' );
-				jQuery( ".persons-value" ).html( '1 Person' );
-				jQuery( '#tab-reservation-payment' ).removeClass('active');
-			});
-		});
-	</script>
-	<script src="/front/js/search.js"></script>
 </body>
 </html>

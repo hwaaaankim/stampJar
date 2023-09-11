@@ -7,13 +7,11 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
-              
 # 동작 환경 설정
 spring:
   profiles:
-    active: test
+    active: prod
 server:
-  port: 8080  
   servlet:
     session:
       timeout: 1440m      # 60m * 24h * 30d
@@ -30,7 +28,7 @@ spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     password: ghksrka3849!
-    url: jdbc:mariadb://localhost:3306/forecast?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mariadb://43.201.82.178:3306/stamp?useUnicode=true&characterEncoding=utf8
     username: root
     hikari:
       connectionTimeout: 30000
@@ -51,19 +49,6 @@ spring:
     multipart:
       maxFileSize: 100MB
       maxRequestSize: -1
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: 'bionlifesci@gmail.com'
-    password: 'nuuhdepcsveygwsy'
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-  upload.path: src/main/resources/static/administration
-  upload.env: local
   
  
 # 배포 환경
@@ -74,9 +59,9 @@ spring:
       on-profile: prod
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    password: bion2272!@
-    url: jdbc:mariadb://localhost:3306/bionls?useUnicode=true&characterEncoding=utf8
-    username: bionls
+    password: ghksrka3849!
+    url: jdbc:mariadb://localhost:3306/stamp?useUnicode=true&characterEncoding=utf8
+    username: root
     hikari:
       connectionTimeout: 30000
       maximumPoolSize: 10
@@ -96,18 +81,6 @@ spring:
     multipart:
       maxFileSize: 100MB
       maxRequestSize: -1
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: 'bionlifesci@gmail.com'
-    password: 'nuuhdepcsveygwsy'
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-  upload.path: /home/hosting_users/bionls/tomcat/webapps
-  upload.env: prod
+
 
 
