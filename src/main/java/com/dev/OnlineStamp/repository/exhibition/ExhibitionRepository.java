@@ -1,5 +1,7 @@
 package com.dev.OnlineStamp.repository.exhibition;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -21,4 +23,6 @@ public interface ExhibitionRepository extends JpaRepository<Exhibition, Long>{
 	Page<Exhibition> findAllByNameContainingAndSort(Pageable pageable, String name, Boolean sort);
 	
 	Page<Exhibition> findAllByAuthorContainingAndSort(Pageable pageable, String author, Boolean sort);
+	
+	List<Exhibition> findAllBySubjectAndSort(String subject, Boolean sort);
 }
