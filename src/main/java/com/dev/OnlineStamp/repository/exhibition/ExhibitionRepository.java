@@ -10,15 +10,15 @@ import com.dev.OnlineStamp.model.exhibition.Exhibition;
 @Repository
 public interface ExhibitionRepository extends JpaRepository<Exhibition, Long>{
 
-	Page<Exhibition> findAll(Pageable pageable);
+	Page<Exhibition> findAllBySort(Pageable pageable, Boolean sort);
 	
-	Page<Exhibition> findAllBySubject(Pageable pageable, String subject);
+	Page<Exhibition> findAllBySubjectAndSort(Pageable pageable, String subject, Boolean sort);
 	
-	Page<Exhibition> findAllBySubjectAndNameContaining(Pageable pageable,String subject, String name);
+	Page<Exhibition> findAllBySubjectAndSortAndNameContaining(Pageable pageable,String subject, String name, Boolean sort);
 	
-	Page<Exhibition> findAllBySubjectAndAuthorContaining(Pageable pageable,String subject, String author);
+	Page<Exhibition> findAllBySubjectAndSortAndAuthorContaining(Pageable pageable,String subject, String author, Boolean sort);
 	
-	Page<Exhibition> findAllByNameContaining(Pageable pageable, String name);
+	Page<Exhibition> findAllByNameContainingAndSort(Pageable pageable, String name, Boolean sort);
 	
-	Page<Exhibition> findAllByAuthorContaining(Pageable pageable, String author);
+	Page<Exhibition> findAllByAuthorContainingAndSort(Pageable pageable, String author, Boolean sort);
 }

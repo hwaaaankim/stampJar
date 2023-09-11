@@ -35,29 +35,29 @@ public class ContestController {
 //		Page<Exhibition> exhibitions = exhibitionRepository.findAll(pageable);
 		Page<Exhibition> exhibitions = null;
 		if("all".equals(subject) && "".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAll(pageable);
+			exhibitions = exhibitionRepository.findAllBySort(pageable, true);
 			
 		}else if(!"all".equals(subject) && "".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubject(pageable, subject);
+			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
 			
 		}else if(!"all".equals(subject) && !"".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubject(pageable, subject);
+			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
 			
 		}else if(!"all".equals(subject) && "".equals(searchType) && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubject(pageable, subject);
+			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
 			
 		}else if(!"all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
 			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndNameContaining(pageable, subject, searchWord);
+				exhibitions = exhibitionRepository.findAllBySubjectAndSortAndNameContaining(pageable, subject, searchWord, true);
 			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndAuthorContaining(pageable, subject, searchWord);
+				exhibitions = exhibitionRepository.findAllBySubjectAndSortAndAuthorContaining(pageable, subject, searchWord, true);
 			}
 		}else if("all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
 			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllByNameContaining(pageable, searchWord);
+				exhibitions = exhibitionRepository.findAllByNameContainingAndSort(pageable, searchWord, true);
 				
 			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllByAuthorContaining(pageable, searchWord);
+				exhibitions = exhibitionRepository.findAllByAuthorContainingAndSort(pageable, searchWord, true);
 				
 			}
 			
