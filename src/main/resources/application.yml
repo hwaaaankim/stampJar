@@ -10,7 +10,7 @@ logging:
 # 동작 환경 설정
 spring:
   profiles:
-    active: test
+    active: prod
 server:
   servlet:
     session:
@@ -24,7 +24,7 @@ server:
 spring:
   config:
     activate: 
-      on-profile: prod
+      on-profile: test
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     password: ghksrka3849!
