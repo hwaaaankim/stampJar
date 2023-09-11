@@ -27,9 +27,9 @@ public class ContestController {
 	public String excellent(
 			Model model,
 			@PageableDefault(size = 12) Pageable pageable,
-			@RequestParam(required = false) String subject,
-			@RequestParam(required = false) String searchType,
-			@RequestParam(required = false) String searchWord
+			@RequestParam(required = false, defaultValue = "all") String subject,
+			@RequestParam(required = false, defaultValue = "") String searchType,
+			@RequestParam(required = false, defaultValue = "") String searchWord
 			) {
 		
 //		Page<Exhibition> exhibitions = exhibitionRepository.findAll(pageable);
