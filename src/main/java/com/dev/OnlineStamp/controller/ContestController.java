@@ -101,16 +101,16 @@ public class ContestController {
 		
 		Page<Exhibition> exhibitions = null;
 		if("all".equals(subject) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySort(pageable, true);
+			exhibitions = exhibitionRepository.findAllBySort(pageable, false);
 			
 		}else if(!"all".equals(subject) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
+			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, false);
 			
 		}else if(!"all".equals(subject) && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSubjectAndSort(pageable, searchWord, searchWord, subject, true);
+			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSubjectAndSort(pageable, searchWord, searchWord, subject, false);
 			
 		}else if("all".equals(subject)  && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSort(pageable, searchWord, searchWord, true);
+			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSort(pageable, searchWord, searchWord, false);
 			
 		}
 		
