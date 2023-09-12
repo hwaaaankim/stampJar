@@ -48,18 +48,7 @@
 
 											<div class="tab-pane fade show active"role="tabpanel" aria-labelledby="tab-reservation-select-dates">
 												<div class="row">
-													<div class="col-2">
-														<div class="mb-4">
-															<label>게시물 수 설정 : </label>
-															<select class="form-select border-form-control" th:name="size">
-																<option th:value="12" th:selected="${exhibitions.pageable.pageSize}=='12'">기본</option>
-																<option th:value="30" th:selected="${exhibitions.pageable.pageSize}=='30'">30개씩 보기</option>
-																<option th:value="60" th:selected="${exhibitions.pageable.pageSize}=='60'">60개씩 보기</option>
-																<option th:value="90" th:selected="${exhibitions.pageable.pageSize}=='90'">90개씩 보기</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2">
+													<div class="col-4">
 														<div class="mb-4">
 															<label>부문별 검색 : </label>
 															<select class="form-select border-form-control" name="subject">
@@ -85,23 +74,12 @@
 															</select>
 														</div>
 													</div>
-													<div class="col-3">
-														<div class="mb-4">
-															<label>검색 조건 설정 : </label>
-															<select class="form-select border-form-control" name="searchType">
-																<option value="">검색 조건 설정</option>
-																<option th:selected="${searchType} == 'name'" value="name">제목 검색</option>
-																<option th:selected="${searchType} == 'author'" value="author">작가별 검색</option>
-															</select>
-														</div>
-													</div>
-													
-													<div class="col-3">
+													<div class="col-4">
 														<label>검색어 입력 : </label>
 														<input type="text" name="searchWord" th:value="${searchWord}"
 														 class="form-control border-form-control" placeholder="검색어 입력 후 검색 버튼을 클릭 해 주세요.">
 													</div>
-													<div class="col-2">
+													<div class="col-4">
 														<button type="submit"
 														 style="width:100%;" 
 														 class="search-btn button button-middle button-white button-light text-center">검색</button>
@@ -120,28 +98,16 @@
 			<div class="content-wrap pt-0">
 				<div class="container">
 					<div class="portfolio row grid-container gutter-20"  data-layout="fitRows">
-						<article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12" th:each="e:${exhibitions}">
+						<article style="border:1px solid rgba(0,0,0,0.3);" class="portfolio-item col-md-4 col-sm-6 col-12" th:each="e:${exhibitions}">
 							<div class="grid-inner">
 								<div class="portfolio-image">
-									<div class="fslider" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide" th:each="i:${e.slideImages}"><a th:href="@{|/contest/normalDetail/${e.id}|}"><img th:src="@{${i}}" alt="전시회 작품 대표이미지"></a></div>
-											</div>
-										</div>
-									</div>
-									<div class="bg-overlay" data-lightbox="gallery">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-											<a th:href="${e.firstImage}" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="uil uil-images"></i></a>
-											<a th:each="x : ${e.slideImages}" th:href="${x}" class="d-none" data-lightbox="gallery-item"></a>
-											<a th:href="@{|/contest/normalDetail/${e.id}|}" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-									</div>
+									<a th:href="@{|/contest/normalDetail/${e.id}|}" >
+										<img style="max-height:500px;" th:src="@{${e.firstImage}}" alt="대표이미지">
+									</a>
 								</div>
 								<div class="portfolio-desc">
 									<h3><a th:href="@{|/contest/normalDetail/${e.id}|}"># [[${e.name}]]</a></h3>
-									<span><a th:href="@{|/contest/normalDetail/${e.id}|}"># [[${e.author}]]</a> <a th:href="@{|/contest/normalDetail/${e.id}|}"># [[${e.prizeName}]]</a> <a th:href="@{|/contest/normalDetail/${e.id}|}"># [[${e.subject}]]</a></span>
+									<span><a th:href="@{|/contest/normalDetail/${e.id}|}"># [[${e.author}]]</a> <a th:href="@{|/contest/excellentDetail/${e.id}|}"># [[${e.prizeName}]]</a> <a th:href="@{|/contest/excellentDetail/${e.id}|}"># [[${e.subject}]]</a></span>
 								</div>
 							</div>
 						</article>

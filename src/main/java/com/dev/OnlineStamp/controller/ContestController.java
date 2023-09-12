@@ -30,40 +30,21 @@ public class ContestController {
 			Model model,
 			@PageableDefault(size = 12) Pageable pageable,
 			@RequestParam(required = false, defaultValue = "all") String subject,
-			@RequestParam(required = false, defaultValue = "") String searchType,
 			@RequestParam(required = false, defaultValue = "") String searchWord
 			) {
-		
 		Page<Exhibition> exhibitions = null;
-		if("all".equals(subject) && "".equals(searchType) && "".equals(searchWord)) {
+		if("all".equals(subject) && "".equals(searchWord)) {
 			exhibitions = exhibitionRepository.findAllBySort(pageable, true);
 			
-		}else if(!"all".equals(subject) && "".equals(searchType) && "".equals(searchWord)) {
+		}else if(!"all".equals(subject) && "".equals(searchWord)) {
 			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
 			
-		}else if(!"all".equals(subject) && !"".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
+		}else if(!"all".equals(subject) && !"".equals(searchWord)) {
+			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSubjectAndSort(pageable, searchWord, searchWord, subject, true);
 			
-		}else if(!"all".equals(subject) && "".equals(searchType) && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
+		}else if("all".equals(subject)  && !"".equals(searchWord)) {
+			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSort(pageable, searchWord, searchWord, true);
 			
-		}else if(!"all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
-			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndNameContainingAndSort(pageable, subject, searchWord, true);
-			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndAuthorContainingAndSort(pageable, subject, searchWord, true);
-			}
-		}else if("all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
-			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllByNameContainingAndSort(pageable, searchWord, true);
-				
-			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllByAuthorContainingAndSort(pageable, searchWord, true);
-				
-			}
-			
-		}else if("all".equals(subject) && "".equals(searchType) && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllByNameContainingAndSort(pageable, "none", true);
 		}
 		
 		
@@ -82,7 +63,6 @@ public class ContestController {
 		int startPage = Math.max(1, exhibitions.getPageable().getPageNumber() - 4);
 		int endPage = Math.min(exhibitions.getTotalPages(), exhibitions.getPageable().getPageNumber() + 4);
 		model.addAttribute("subject", subject);
-		model.addAttribute("searchType", searchType);
 		model.addAttribute("searchWord", searchWord);
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);
@@ -116,40 +96,22 @@ public class ContestController {
 	public String normal(Model model,
 			@PageableDefault(size = 12) Pageable pageable,
 			@RequestParam(required = false, defaultValue = "all") String subject,
-			@RequestParam(required = false, defaultValue = "") String searchType,
 			@RequestParam(required = false, defaultValue = "") String searchWord
 			) {
 		
 		Page<Exhibition> exhibitions = null;
-		if("all".equals(subject) && "".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySort(pageable, false);
+		if("all".equals(subject) && "".equals(searchWord)) {
+			exhibitions = exhibitionRepository.findAllBySort(pageable, true);
 			
-		}else if(!"all".equals(subject) && "".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, false);
+		}else if(!"all".equals(subject) && "".equals(searchWord)) {
+			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
 			
-		}else if(!"all".equals(subject) && !"".equals(searchType) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, false);
+		}else if(!"all".equals(subject) && !"".equals(searchWord)) {
+			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSubjectAndSort(pageable, searchWord, searchWord, subject, true);
 			
-		}else if(!"all".equals(subject) && "".equals(searchType) && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, false);
+		}else if("all".equals(subject)  && !"".equals(searchWord)) {
+			exhibitions = exhibitionRepository.findAllByNameContainingOrAuthorContainingAndSort(pageable, searchWord, searchWord, true);
 			
-		}else if(!"all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
-			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndNameContainingAndSort(pageable, subject, searchWord, false);
-			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllBySubjectAndAuthorContainingAndSort(pageable, subject, searchWord, false);
-			}
-		}else if("all".equals(subject) && !"".equals(searchType) && !"".equals(searchWord)) {
-			if("name".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllByNameContainingAndSort(pageable, searchWord, false);
-				
-			}else if("author".equals(searchType)) {
-				exhibitions = exhibitionRepository.findAllByAuthorContainingAndSort(pageable, searchWord, false);
-				
-			}
-			
-		}else if("all".equals(subject) && "".equals(searchType) && !"".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllByNameContainingAndSort(pageable, "none", true);
 		}
 		
 		
@@ -168,7 +130,6 @@ public class ContestController {
 		int startPage = Math.max(1, exhibitions.getPageable().getPageNumber() - 4);
 		int endPage = Math.min(exhibitions.getTotalPages(), exhibitions.getPageable().getPageNumber() + 4);
 		model.addAttribute("subject", subject);
-		model.addAttribute("searchType", searchType);
 		model.addAttribute("searchWord", searchWord);
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);

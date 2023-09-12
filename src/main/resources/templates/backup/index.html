@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('온라인 우표전시회 홈')">
+    
+</head>
+
+<body class="stretched" data-menu-breakpoint="1200">
+
+    <div id="wrapper">
+        <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('index')">
+         
+        </header>
+
+        <section id="slider" class="slider-element slider-parallax min-vh-60 min-vh-md-100 include-header">
+            <div class="slider-inner"
+                style="background-image: url('/front/images/new/bg01.jpg'); background-size: cover; background-position: center center;">
+
+                <div class="vertical-middle slider-element-fade">
+                    <div class="container mt-5 mb-6">
+                        <div class="row align-items-center justify-content-center col-mb-80">
+                            <div class="col-12 text-center pb-0">
+                                <style>
+                                    .has-plugin-textrotator .textrotator-placeholder {
+                                        display: none
+                                    }
+                                </style>
+                                <div class="svg-section">
+                                    <div id="svgcontainer">
+                                        <div id="text-container">
+                                            <h1>Online Stamp Festival</h1>
+                                            <h2><span>20</span><span>23</span></h2>
+                                        </div>
+                                        <div id="sun-container">
+
+                                            <svg viewBox="0 0 150 145" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="inner-sun" fill-rule="evenodd">
+                                                    <circle id="sun" cx="61" cy="82" r="61"></circle>
+                                                    <circle class="dot" cx="10" cy="19" r="3"></circle>
+                                                    <circle class="dot" cx="148.5" cy="1.5" r="1.5"></circle>
+                                                    <circle class="dot" cx="95" cy="144" r="1"></circle>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div id="rays-container" data-depth='0.5'>
+                                            <svg viewBox="0 0 404 229" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="rays" fill-rule="evenodd">
+                                                    <line x1="31" y1="226" x2="3" y2="217" class="ray"></line>
+                                                    <line x1="54" y1="184" x2="17" y2="147" class="ray"></line>
+                                                    <line x1="114" y1="155" x2="59" y2="60" class="ray"></line>
+                                                    <line x1="173" y1="137" x2="145" y2="3" class="ray"></line>
+                                                    <line x1="231" y1="137" x2="259" y2="3" class="ray"></line>
+                                                    <line x1="290" y1="155" x2="345" y2="60" class="ray"></line>
+                                                    <line x1="350" y1="184" x2="387" y2="147" class="ray"></line>
+                                                    <line x1="373" y1="226" x2="401" y2="217" class="ray"></line>
+                                                </g>
+                                            </svg>
+                                        </div>
+
+                                        <div id="leaf-container">
+                                            <svg viewBox="0 0 141 73" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="leaf" fill-rule="evenodd">
+                                                    <path
+                                                        d="M137,10 C114.866666,29.3333333 92.533333,39 70,39 C47.466667,39 24.8000003,29.3333333 2,10"
+                                                        id="stem"></path>
+                                                    <path
+                                                        d="M114,27 C99.3333333,35 95,46.3333333 101,61 C117,56.3333333 121.333333,45 114,27 Z">
+                                                    </path>
+                                                    <path
+                                                        d="M113.612903,27 C98.9462366,35 94.6129032,46.3333333 100.612903,61 C116.612903,56.3333333 120.946237,45 113.612903,27 Z">
+                                                    </path>
+                                                    <path
+                                                        d="M114,27 C107.333333,12.3333333 97,8.33333333 83,15 C87,28.3333333 97.3333333,32.3333333 114,27 Z">
+                                                    </path>
+                                                    <path
+                                                        d="M76.2997601,38.1183854 C59.4332534,40.0394618 51.6666667,48.6666667 53,64 C68.3333333,65.3333333 76.09992,56.7061285 76.2997601,38.1183854 Z">
+                                                    </path>
+                                                    <path
+                                                        d="M76.65867,38.2633944 C75.0253544,21.6368075 66.2861342,13.219667 50.4410096,13.0119729 C48.4850009,29.5634625 57.224221,37.980603 76.65867,38.2633944 Z">
+                                                    </path>
+                                                    <path
+                                                        d="M39.3648737,32.3926122 C20.4549579,30.1308707 9.55644378,35.4642198 6.66933133,48.3926594 C21.5536496,55.8916492 32.4521637,50.5583001 39.3648737,32.3926122 Z">
+                                                    </path>
+                                                    <path
+                                                        d="M39.6479783,32.6566116 C45.2159928,16.8855372 40.3333333,6.66666667 25,2 C19,16.6666667 23.8826594,26.8855372 39.6479783,32.6566116 Z">
+                                                    </path>
+                                                </g>
+                                                <circle class="dot" cx="9.5" cy="2.5" r="2.5"></circle>
+                                                <circle class="dot" cx="118.5" cy="6.5" r="1.5"></circle>
+                                                <circle class="dot" cx="86.5" cy="70.5" r="2.5"></circle>
+
+                                            </svg>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="fw-semibold lh-sm display-4 mb-3" style="letter-spacing:-1px; color:white;">
+                                    <span class="text-rotater-section nocolor" data-separator="|" data-rotate="fadeIn"
+                                        data-speed="2500"><span class="t-rotate c-white">즐거움이 가득한|함께 즐기는|컨텐츠가
+                                            풍성한</span></span> 우표전시회
+                                </h1>
+                            </div>
+                            <div class="col-lg-8 text-center pb-3">
+                                <p class="lead fs-5 mb-5">온라인 전시회에 대한 서브타이틀 영역 입니다. <span
+                                        class="counter counter-inherit color fw-semibold"><span data-from="99"
+                                            data-to="1300" data-refresh-interval="50" data-speed="1000"></span>+</span>
+                                    참여자 혹은 전시회 출품작의 수량을 입력할 수 있습니다.
+                                    온라인 전시회에 대한 서브타이틀 컨텐츠 영역 입니다. &amp; <span
+                                        class="counter counter-inherit color fw-semibold"><span data-from="99"
+                                            data-to="2000" data-refresh-interval="50" data-speed="1000"></span>+</span>
+                                    카운팅 영역 입니다.</p>
+                                <div class="row justify-content-center gutter-20 mx-auto main-btn-wrap" style="max-width: 600px;">
+                                    <div class="col-sm-4 col-xl-4">
+                                        <a href="#" data-scrollto="#niche-demos-grid"
+                                            class="button button-large button-shadow button-shadow-contrast border-contrast-900 bg-opacity-50 border border-width-2 text-contrast-900 h-text-light rounded m-0 w-100"
+                                            data-offset="100" data-easing="easeInOutExpo" data-speed="1250"
+                                            style="padding: 0.75rem 2rem;"><i class="uil uil-images"
+                                                style="position: relative; top: 1px; margin-right: 5px;"></i>
+                                            행사안내</a>
+                                    </div>
+                                    <div class="col-sm-4 col-xl-4">
+                                        <a href="#"
+                                            class="button button-large button-shadow button-shadow-contrast button-border border-contrast-900 border-width-2 button-contrast-900 text-contrast-900 h-text-light rounded m-0 w-100"
+                                            style="padding: 0.75rem 2rem;"><i class="bi-magic me-2"></i> 참가신청</a>
+                                    </div>
+                                    <div class="col-sm-4 col-xl-4">
+                                        <a href="#"
+                                            class="button button-large button-shadow button-shadow-contrast button-border border-contrast-900 border-width-2 button-contrast-900 text-contrast-900 h-text-light rounded m-0 w-100"
+                                            style="padding: 0.75rem 2rem;"><i class="bi-magic me-2"></i> 다운로드</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <span class="d-inline-block mb-3 me-3 small"><i
+                                        class="fa-check fa-solid me-1 position-relative text-success"
+                                        style="top:1px"></i> # 최고의 즐거음</span>
+                                <span class="d-inline-block mb-3 me-3 small"><i
+                                        class="fa-check fa-solid me-1 position-relative text-success"
+                                        style="top:1px"></i> # 멋진 컨텐츠</span>
+                                <span class="d-inline-block mb-3 me-3 small"><i
+                                        class="fa-star fa-solid me-1 position-relative text-warning"></i> 1800+
+                                    이상의 출품작</span>
+                                <span class="d-inline-block mb-3 me-3 small"><i
+                                        class="fa-check fa-solid me-1 position-relative text-success"
+                                        style="top:1px"></i> # 우표에 대한 문구</span>
+                                <span class="d-inline-block mb-3 small"><i
+                                        class="fa-check fa-solid me-1 position-relative text-success"
+                                        style="top:1px"></i> # 우표에 대한 문구</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear mb-4"></div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="content">
+            <div class="container" style="padding-top:80px;">
+                <div class="title-block">
+                    <h1>전시회 작품</h1>
+                    <span># 전시회 작품들이 랜덤으로 나열 됩니다.</span>
+                    <span># 작품을 클릭하면 해당 작품의 상세페이지로 이동합니다.(현재는 임시로 네이버로 연결 됩니다)</span>
+                </div>
+            </div>
+            <div class="position-relative w-100" style="margin-top:100px;">
+                <style>
+                    .swiper-wrapper {
+                        -webkit-transition-timing-function: linear !important;
+                        transition-timing-function: linear !important;
+                        position: relative;
+                    }
+                </style>
+                <div class="overflow-hidden slider-element swiper_wrapper intro-swiper-marquee customjs h-auto">
+                    <div class="slider-inner viewport-detect">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/8.png"
+                                                        data-src="/front/images/new/sample/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/8.png"
+                                                        data-src="/front/images/new/sample2/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/9.png"
+                                                        data-src="/front/images/new/sample/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/9.png"
+                                                        data-src="/front/images/new/sample2/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/10.png"
+                                                        data-src="/front/images/new/sample/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/10.png"
+                                                        data-src="/front/images/new/sample2/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/1.png"
+                                                        data-src="/front/images/new/sample/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/1.png"
+                                                        data-src="/front/images/new/sample2/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/2.png"
+                                                        data-src="/front/images/new/sample/2.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/2.png"
+                                                        data-src="/front/images/new/sample2/2.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/3.png"
+                                                        data-src="/front/images/new/sample/3.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/3.png"
+                                                        data-src="/front/images/new/sample2/3.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/4.png"
+                                                        data-src="/front/images/new/sample/4.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/4.png"
+                                                        data-src="/front/images/new/sample2/4.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/5.png"
+                                                        data-src="/front/images/new/sample/5.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/5.png"
+                                                        data-src="/front/images/new/sample2/5.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/6.png"
+                                                        data-src="/front/images/new/sample/6.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/6.png"
+                                                        data-src="/front/images/new/sample2/6.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/7.png"
+                                                        data-src="/front/images/new/sample/7.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/7.png"
+                                                        data-src="/front/images/new/sample2/7.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/8.png"
+                                                        data-src="/front/images/new/sample/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/8.png"
+                                                        data-src="/front/images/new/sample2/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/9.png"
+                                                        data-src="/front/images/new/sample/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/9.png"
+                                                        data-src="/front/images/new/sample2/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/10.png"
+                                                        data-src="/front/images/new/sample/10.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/10.png"
+                                                        data-src="/front/images/new/sample2/10.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/1.png"
+                                                        data-src="/front/images/new/sample/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/1.png"
+                                                        data-src="/front/images/new/sample2/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/2.png"
+                                                        data-src="/front/images/new/sample/2.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/2.png"
+                                                        data-src="/front/images/new/sample2/2.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/3.png"
+                                                        data-src="/front/images/new/sample/3.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/3.png"
+                                                        data-src="/front/images/new/sample2/3.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/4.png"
+                                                        data-src="/front/images/new/sample/4.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/4.png"
+                                                        data-src="/front/images/new/sample2/4.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/5.png"
+                                                        data-src="/front/images/new/sample/5.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/5.png"
+                                                        data-src="/front/images/new/sample2/5.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/6.png"
+                                                        data-src="/front/images/new/sample/6.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/6.png"
+                                                        data-src="/front/images/new/sample2/6.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/7.png"
+                                                        data-src="/front/images/new/sample/7.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/7.png"
+                                                        data-src="/front/images/new/sample2/7.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/8.png"
+                                                        data-src="/front/images/new/sample/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/8.png"
+                                                        data-src="/front/images/new/sample2/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/9.png"
+                                                        data-src="/front/images/new/sample/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/9.png"
+                                                        data-src="/front/images/new/sample2/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/10.png"
+                                                        data-src="/front/images/new/sample/10.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/10.png"
+                                                        data-src="/front/images/new/sample2/10.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/1.png"
+                                                        data-src="/front/images/new/sample/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/1.png"
+                                                        data-src="/front/images/new/sample2/1.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/2.png"
+                                                        data-src="/front/images/new/sample/2.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/2.png"
+                                                        data-src="/front/images/new/sample2/2.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/3.png"
+                                                        data-src="/front/images/new/sample/3.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/3.png"
+                                                        data-src="/front/images/new/sample2/3.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/4.png"
+                                                        data-src="/front/images/new/sample/4.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/4.png"
+                                                        data-src="/front/images/new/sample2/4.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/5.png"
+                                                        data-src="/front/images/new/sample/5.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/5.png"
+                                                        data-src="/front/images/new/sample2/5.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/6.png"
+                                                        data-src="/front/images/new/sample/6.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/6.png"
+                                                        data-src="/front/images/new/sample2/6.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/7.png"
+                                                        data-src="/front/images/new/sample/7.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/7.png"
+                                                        data-src="/front/images/new/sample2/7.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row g-4 mb-5">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/8.png"
+                                                        data-src="/front/images/new/sample/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/8.png"
+                                                        data-src="/front/images/new/sample2/8.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/9.png"
+                                                        data-src="/front/images/new/sample/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-5">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/9.png"
+                                                        data-src="/front/images/new/sample2/9.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample/10.png"
+                                                        data-src="/front/images/new/sample/10.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="grid-inner">
+                                                <a href="https://www.naver.com" target="_blank">
+                                                    <img width="221" height="159" src="/front/images/new/sample2/10.png"
+                                                        data-src="/front/images/new/sample2/10.png" alt="SAMPLE"
+                                                        class="rounded-5 lazy">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="position-absolute start-50 top-50 translate-middle z-2">
+                    <div
+                        class="px-3 bg-white rounded-6 border border-width-2 border-dark button-shadow button-shadow-dark button-shadow-nohover">
+                        <span class="text-rotater-section font-primary text-black fw-medium demos-text-rotator"
+                            data-separator="|" data-rotate="fadeIn" data-speed="50" data-backdelay="1000"
+                            data-typed="true" data-shuffle="true" data-loop="true" data-cursor="false">
+                            &nbsp;<span class="t-rotate">관광인-주제별|그림엽서|맥시머필리|어린이_우취|열린우취</span>&nbsp;
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="padding-top:80px;">
+                <div class="title-block">
+                    <h1>전시회 CONTENTS</h1>
+                    <span># 전시회와 컨텐츠가 입력됩니다.</span>
+                    <span># 자세히보기 클릭 시 해당 상세페이지로 이동됩니다.</span>
+                    <span># 카테고리별로 내용이 분류되어 나타납니다.</span>
+                </div>
+            </div>
+            <div class="container" style="margin-bottom:80px;">
+                <div id="swiper-tab-container" class="swiper-tab-container">
+
+                    <div class="swiper-tab-pagination m-d-none"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="row mt-3 slide-inner">
+                                <div class="col-md-5">
+                                    <div class="widget swiper-widget">
+                                        <div class="widget-title">제목이 들어가는 영역 입니다.</div>
+                                        <p class="mb-5">컨텐츠에 대한 설명이 들어가는 영역 입니다.
+                                        </p>
+                                        <a href="#" class="btn btn-inverted link-btn" target="_blank">자세히보기</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img width="100%" class="img-fluid" src="/front/images/new/sample2/1.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row mt-3 slide-inner">
+                                <div class="col-md-5">
+                                    <div class="widget swiper-widget">
+                                        <div class="widget-title">제목이 들어가는 영역 입니다.</div>
+                                        <p class="mb-5">컨텐츠에 대한 설명이 들어가는 영역 입니다.
+                                        </p>
+                                        <a href="#" class="btn btn-inverted link-btn" target="_blank">자세히보기</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img width="100%" class="img-fluid" src="/front/images/new/sample2/1.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row mt-3 slide-inner">
+
+
+                                <div class="col-md-5">
+                                    <div class="widget swiper-widget">
+                                        <div class="widget-title">제목이 들어가는 영역 입니다.</div>
+                                        <p class="mb-5">컨텐츠에 대한 설명이 들어가는 영역 입니다.
+                                        </p>
+                                        <a href="#" class="btn btn-inverted link-btn" target="_blank">자세히보기</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img class="img-fluid small-rounded" src="/front/images/new/sample2/1.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="container-wrap"
+                style="background-image:url('/front/images/new/bg/hot.png'); background-repeat: no-repeat; background-position: center;">
+                <div class="container" style="padding-top:80px;">
+                    <div class="title-block">
+                        <h1>전시회 NOTICE</h1>
+                        <span># 전시회의 소식이 나열되는 영역 입니다.</span>
+                        <span># 제목 클릭 시 해당 상세페이지로 이동됩니다.</span>
+                        <span># 이동하기 버튼 클릭 시 해당 공지사항 또는 이벤트 페이지로 연결 됩니다.</span>
+                    </div>
+                </div>
+                <div class="content-wrap pb-0">
+                    <div class="container">
+
+                        <div class="row col-mb-80">
+                            <main class="postcontent col-lg-6">
+
+                                <div class="row g-4 mb-5">
+
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <img src="/front/images/new/notice.jpg" alt="#" class="rounded-2">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">공지사항[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">공지사항 작성일</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">공지사항 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">공지사항 작성일</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">공지사항 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">공지사항 작성일</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">공지사항 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+
+                            </main>
+                            <main class="postcontent col-lg-6">
+
+                                <div class="row g-4 mb-5">
+
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <img src="/front/images/new/event.jpg" alt="#" class="rounded-2">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">EVENT[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">이벤트 업로드 시각</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">이벤트 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">이벤트 업로드 시각</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">이벤트 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">이벤트 업로드 시각</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">이벤트 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo promo-light promo-full promo-uppercase p-4 p-md-5 mb-5 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg">
+                            <h3>온라인 전시회 한줄 문구가 들어가는 영역 입니다.</h3>
+                        </div>
+                        <div class="col-12 col-lg-auto mt-4 mt-lg-0">
+                            <a href="#"
+                                class="button button-rounded button-reveal button-large button-black text-end"><i
+                                    class="bi-arrow-right"></i><span>참여하기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-wrap"
+                style="background-image:url('/front/images/new/bg/leg.png'); background-repeat: no-repeat; background-position: center;">
+                <div class="container" style="padding-top:80px;">
+                    <div class="title-block">
+                        <h1>전시회 MEDIA</h1>
+                        <span># 전시회와 관련된 영상 혹은 보도자료가 업로드 됩니다.</span>
+                        <span># 제목 클릭 시 해당 상세페이지로 이동됩니다.</span>
+                        <span># 이동하기 버튼 클릭 시 해당 공지사항 또는 이벤트 페이지로 연결 됩니다.</span>
+                    </div>
+                </div>
+                <div class="content-wrap pb-0">
+                    <div class="container">
+
+                        <div class="row col-mb-80">
+                            <main class="postcontent col-lg-6">
+
+                                <div class="row g-4 mb-5">
+
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <img src="/front/images/new/press.jpg" alt="#" class="rounded-2">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">보도자료[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">보도자료 작성일</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">보도자료 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 보도자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">보도자료[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">보도자료 작성일</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">보도자료 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 보도자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">보도자료[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">보도자료 작성일</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">보도자료 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 보도자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+
+                            </main>
+                            <main class="postcontent col-lg-6">
+
+                                <div class="row g-4 mb-5">
+
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <img src="/front/images/new/refer.jpg" alt="#" class="rounded-2">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">기타자료[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">기타자료 업로드 시각</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">기타자료 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 기타자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">기타자료[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">기타자료 업로드 시각</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">기타자료 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 기타자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="entry event col-12 mb-0">
+                                        <div
+                                            class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                                            <div class="col-12 mb-md-0">
+                                                <a href="#" class="entry-image">
+                                                    <div class="bg-overlay">
+                                                        <div
+                                                            class="bg-overlay-content justify-content-start align-items-start">
+                                                            <div class="badge bg-light text-dark rounded-pill">기타자료[번호]
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 p-1 pt-0">
+                                                <div class="entry-meta no-separator mb-1 mt-0">
+                                                    <ul>
+                                                        <li><a href="#" class="text-uppercase fw-medium">기타자료 업로드 시각</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="entry-title nott">
+                                                    <h3><a href="#">기타자료 제목</a></h3>
+                                                </div>
+                                                <div class="entry-content my-3">
+                                                    <p class="mb-0"># 기타자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
+                                                    <p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+                                                </div>
+
+                                                <div class="entry-meta no-separator">
+                                                    <ul style="float:right;">
+                                                        <li><a href="#" class="fw-normal"> <i
+                                                                    class="bi-arrow-right-square"></i>자세히보기</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="padding-top:80px;">
+                <div class="title-block">
+                    <h1>전시회 CLIENT</h1>
+                    <span># 전시회의 다양한 참여 기업 입니다.</span>
+                    <span># 필요하신 경우 로고 클릭 시 해당 업체로 연결할 수 있습니다.</span>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <div class="container">
+                    <ul class="clients-grid row row-cols-2 row-cols-sm-5">
+                        <li class="col"><a href="#"><img src="/front/images/new/logo/11.png" alt="Clients"></a></li>
+                        <li class="col"><a href="#"><img src="/front/images/new/logo/22.png" alt="Clients"></a></li>
+                        <li class="col"><a href="#"><img src="/front/images/new/logo/33.png" alt="Clients"></a></li>
+                        <li class="col"><a href="#"><img src="/front/images/new/logo/44.png" alt="Clients"></a></li>
+                        <li class="col"><a href="#"><img src="/front/images/new/logo/55.png" alt="Clients"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="promo promo-light promo-full promo-uppercase p-4 p-md-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-12 col-lg">
+                        <h3># 우편산업 진흥원의 소식을 받아보세요.</h3>
+                        <h3># 이메일을 수집할 수 있습니다.</h3>
+                        <h3># 배경색 혹은 이미지로 변경됩니다.</h3>
+                    </div>
+                    <div class="col-md-6 col-12 col-lg mt-4 mt-lg-0">
+                        <div class="widget subscribe-widget">
+                            <div class="widget-subscribe-form-result"></div>
+                            <form id="widget-subscribe-form" action="#" method="post" class="mb-0">
+                                <div class="input-group mx-auto">
+                                    <div class="input-group-text"><i class="bi-envelope-plus"></i></div>
+                                    <input type="email" name="widget-subscribe-form-email"
+                                        class="form-control required email" placeholder="이메일 주소를 보내주시면 다양한 소식을 들려드려요">
+                                    <button class="btn btn-success" type="submit">구독하기</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center text-md-end">
+                        <div class="d-flex justify-content-space-between justify-content-md-end mb-2">
+                            <a href="#" class="social-icon border-transparent si-big h-bg-facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" class="social-icon border-transparent si-big h-bg-twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="social-icon border-transparent si-big h-bg-google">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon border-transparent si-big h-bg-google">
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+    </div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+	<script src="/front/lettering.js"></script>
+	<script src="/front/svg.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/js/swiper.min.js"></script>
+    <script src="/front/page/index.js"></script>
+
+</body>
+</html>

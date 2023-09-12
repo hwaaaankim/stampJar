@@ -25,4 +25,10 @@ public interface ExhibitionRepository extends JpaRepository<Exhibition, Long>{
 	Page<Exhibition> findAllByAuthorContainingAndSort(Pageable pageable, String author, Boolean sort);
 	
 	List<Exhibition> findAllBySubjectAndSort(String subject, Boolean sort);
+	
+	Page<Exhibition> findAllByNameContainingOrAuthorContainingAndSubjectAndSort(Pageable pageable, 
+			String name, String author, String subject, Boolean sort);
+	
+	Page<Exhibition> findAllByNameContainingOrAuthorContainingAndSort(Pageable pageable, 
+			String name, String author, Boolean sort);
 }
