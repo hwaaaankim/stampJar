@@ -601,6 +601,23 @@ table.process-table p{
 	line-height:1.4;
 	letter-spacing:-1px;
 }
+article.exhibition-wrap{
+	height:600px !important;
+	display:flex !important;
+	justify-content:space-between !important;
+	flex-direction: column !important;
+}
+article.exhibition-wrap div.grid-inner{
+	height:600px !important;
+	display:flex !important;
+	justify-content:space-between !important;
+	flex-direction: column !important;
+	border:1px solid rgba(0,0,0,0.7);
+	padding:10px;
+}
 
+article.exhibition-wrap img{
+	max-height:500px !important;
+} 
 
 

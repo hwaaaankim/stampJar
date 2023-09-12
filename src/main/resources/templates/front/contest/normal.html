@@ -98,11 +98,11 @@
 			<div class="content-wrap pt-0">
 				<div class="container">
 					<div class="portfolio row grid-container gutter-20"  data-layout="fitRows">
-						<article style="border:1px solid rgba(0,0,0,0.3);" class="portfolio-item col-md-4 col-sm-6 col-12" th:each="e:${exhibitions}">
+						<article class="exhibition-wrap portfolio-item col-md-4 col-sm-6 col-12" th:each="e:${exhibitions}">
 							<div class="grid-inner">
 								<div class="portfolio-image">
 									<a th:href="@{|/contest/normalDetail/${e.id}|}" >
-										<img style="height:500px;" th:src="@{${e.firstImage}}" alt="대표이미지">
+										<img th:src="@{${e.firstImage}}" alt="대표이미지">
 									</a>
 								</div>
 								<div class="portfolio-desc">
