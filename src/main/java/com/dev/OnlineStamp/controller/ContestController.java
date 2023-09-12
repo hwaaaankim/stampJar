@@ -1,5 +1,6 @@
 package com.dev.OnlineStamp.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,7 +75,16 @@ public class ContestController {
 		model.addAttribute("ex", ex);
 		if(re.size()>0) {
 			for(Exhibition e : re) {
+				ArrayList<String> images = new ArrayList<>();
+				int a=4;
+				if(e.getImages().size()<a) {
+					a = e.getImages().size();
+				}
+				for(int x=1; x<a; x++) {
+					images.add(e.getImages().get(x).getImageRoad());
+				}
 				e.setFirstImage(e.getImages().get(0).getImageRoad());
+				e.setSlideImages(images);
 			}
 		}
 		model.addAttribute("re", re);
@@ -130,7 +140,16 @@ public class ContestController {
 		model.addAttribute("ex", ex);
 		if(re.size()>0) {
 			for(Exhibition e : re) {
+				ArrayList<String> images = new ArrayList<>();
+				int a=4;
+				if(e.getImages().size()<a) {
+					a = e.getImages().size();
+				}
+				for(int x=1; x<a; x++) {
+					images.add(e.getImages().get(x).getImageRoad());
+				}
 				e.setFirstImage(e.getImages().get(0).getImageRoad());
+				e.setSlideImages(images);
 			}
 		}
 		model.addAttribute("re", re);
