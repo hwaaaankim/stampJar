@@ -136,7 +136,7 @@ public class ContestController {
 			Model model
 			) {
 		Exhibition ex = exhibitionRepository.findById(id).get();
-		List<Exhibition> re = exhibitionRepository.findAllBySubjectAndSort(ex.getSubject(), true);
+		List<Exhibition> re = exhibitionRepository.findAllBySubjectAndSort(ex.getSubject(), false);
 		model.addAttribute("ex", ex);
 		if(re.size()>0) {
 			for(Exhibition e : re) {
