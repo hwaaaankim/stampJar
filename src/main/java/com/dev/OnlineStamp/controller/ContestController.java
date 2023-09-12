@@ -1,6 +1,5 @@
 package com.dev.OnlineStamp.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,12 +49,7 @@ public class ContestController {
 		
 		if(exhibitions.getNumberOfElements()>0) {
 			for(Exhibition e : exhibitions) {
-				ArrayList<String> images = new ArrayList<>();
-				for(int a=1; a<4; a++) {
-					images.add(e.getImages().get(a).getImageRoad());
-				}
 				e.setFirstImage(e.getImages().get(0).getImageRoad());
-				e.setSlideImages(images);
 			}
 		}
 		
@@ -80,12 +74,7 @@ public class ContestController {
 		model.addAttribute("ex", ex);
 		if(re.size()>0) {
 			for(Exhibition e : re) {
-				ArrayList<String> images = new ArrayList<>();
-				for(int a=1; a<4; a++) {
-					images.add(e.getImages().get(a).getImageRoad());
-				}
 				e.setFirstImage(e.getImages().get(0).getImageRoad());
-				e.setSlideImages(images);
 			}
 		}
 		model.addAttribute("re", re);
@@ -117,12 +106,7 @@ public class ContestController {
 		
 		if(exhibitions.getNumberOfElements()>0) {
 			for(Exhibition e : exhibitions) {
-				ArrayList<String> images = new ArrayList<>();
-				for(int a=1; a<4; a++) {
-					images.add(e.getImages().get(a).getImageRoad());
-				}
 				e.setFirstImage(e.getImages().get(0).getImageRoad());
-				e.setSlideImages(images);
 			}
 		}
 		
@@ -146,12 +130,7 @@ public class ContestController {
 		model.addAttribute("ex", ex);
 		if(re.size()>0) {
 			for(Exhibition e : re) {
-				ArrayList<String> images = new ArrayList<>();
-				for(int a=1; a<4; a++) {
-					images.add(e.getImages().get(a).getImageRoad());
-				}
 				e.setFirstImage(e.getImages().get(0).getImageRoad());
-				e.setSlideImages(images);
 			}
 		}
 		model.addAttribute("re", re);
