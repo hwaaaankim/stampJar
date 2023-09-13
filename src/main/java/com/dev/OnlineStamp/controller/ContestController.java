@@ -34,7 +34,8 @@ public class ContestController {
 			) {
 		Page<Exhibition> exhibitions = null;
 		if("all".equals(subject) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySort(pageable, true);
+			System.out.println("gd");
+			exhibitions = exhibitionRepository.findAllBySortOrderByPrizeIndexAsc(pageable, true);
 			
 		}else if(!"all".equals(subject) && "".equals(searchWord)) {
 			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, true);
@@ -100,7 +101,7 @@ public class ContestController {
 		
 		Page<Exhibition> exhibitions = null;
 		if("all".equals(subject) && "".equals(searchWord)) {
-			exhibitions = exhibitionRepository.findAllBySort(pageable, false);
+			exhibitions = exhibitionRepository.findAllBySortOrderByPrizeIndexAsc(pageable, false);
 			
 		}else if(!"all".equals(subject) && "".equals(searchWord)) {
 			exhibitions = exhibitionRepository.findAllBySubjectAndSort(pageable, subject, false);

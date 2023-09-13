@@ -25,9 +25,10 @@
 						<span>우수작을 감상해 보세요.</span>
 
 						<div class="page-title-buttons mt-5">
-							<button class="button button-border rounded px-5 mb-0" data-scrollto="#content" data-offset="60">수상작 감상하기<i class="uil uil-arrow-circle-down ms-1"></i></button>
-							<a href="#" class="button button-border rounded px-5 mb-0" data-scrollto="#explore-more-elements">일반 출품작 감상하기<i class="uil uil-cell ms-1"></i></a>
-							<a href="#" target="_blank" class="button button-border rounded px-5 mb-0"><i class="uil uil-shopping-cart me-1"></i>링크 공유하기</a>
+							<button class="button button-border rounded px-5 mb-0 share-btn" data-scrollto="#content">수상작 감상하기<i class="bi-box-arrow-in-down"></i></button>
+							<button id="btnKakao" th:onclick="shareKakao([[${ex.name}]]);" class="button button-border rounded px-5 mb-0 share-btn">카카오톡공유하기<img src="/front/images/sns/k.png"/></button>
+							<button onclick="shareFacebook();" class="button button-border rounded px-5 mb-0 share-btn">페이스북공유하기<img src="/front/images/sns/f.png"/></button>
+							<button onclick="copyUrl();" class="button button-border rounded px-5 mb-0 share-btn">링크 복사하기<i class="bi-share"></i></button>
 						</div>
 					</div>
 				</div>
@@ -133,6 +134,45 @@
 	</div>
 
 	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
-
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<script>
+	var thisUrl = document.URL;
+	function shareFacebook(){
+		var url = "http://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(thisUrl);
+        window.open(url, "", "width=486, height=286");
+	}
+	function shareKakao(title){
+		var snsTitle = title;
+		 
+	    // 사용할 앱의 JavaScript 키 설정
+	    Kakao.init('d143f2ee67453c34ac47361f1608e74b');
+	    
+	    // 카카오링크 버튼 생성
+	    Kakao.Link.createDefaultButton({
+	        container: '#btnKakao', // HTML에서 작성한 ID값
+	        objectType: 'feed',
+	        content: {
+	        title: snsTitle, // 보여질 제목
+	        description: '대한민국 우표 전시회 출품작', // 보여질 설명
+	        imageUrl: thisUrl, // 콘텐츠 URL
+	        link: {
+	            mobileWebUrl: thisUrl,
+	            webUrl: thisUrl
+	        }
+	        }
+	    });
+	}
+	function copyUrl(){
+	   var url = '';
+	   var textarea = document.createElement("textarea");
+	   document.body.appendChild(textarea);
+	   url = thisUrl;
+	   textarea.value = url;
+	   textarea.select();
+	   document.execCommand("copy");
+	   document.body.removeChild(textarea);
+	   alert("링크가 복사되었습니다. 필요하신 곳에 붙여넣기 하세요!")
+	}
+	</script>
 </body>
 </html>

@@ -619,5 +619,34 @@ article.exhibition-wrap div.grid-inner{
 article.exhibition-wrap img{
 	max-height:500px !important;
 } 
+a.port-title{
+	color:black !important;
+	font-size:1.1rem !important;
+	font-weight:600 !important;
+}
+span.port-content > a{
+	color:black !important;
+	font-weight:500 !important;
+}
+.over-wrap{
+	position:absolute;
+	top:-5px;
+	left:-5px;
+	width:30%;
+	text-align:center;
+	padding:5px 10px 5px 10px;
+	background-color:rgba(230,35,16,0.7);
+}
+.over-wrap p{
+	margin-bottom:0px;
+	color:white;
+	font-weight:500;
+}
 
-
+.share-btn img{
+	width:22px;
+	margin-left:10px;
+}
+.share-btn i{
+	margin-left:10px;
+}

@@ -58,6 +58,12 @@ public class Exhibition {
 	@Column(name="EXHIBITION_SIGN")
 	private String sign;
 	
+	@Column(name="EXHIBITION_INDEX")
+	private int index;
+	
+	@Column(name="EXHIBITION_PRIZE_INDEX")
+	private int prizeIndex;
+	
 	@OneToMany(
 			fetch = FetchType.LAZY, 
 			cascade = CascadeType.ALL,

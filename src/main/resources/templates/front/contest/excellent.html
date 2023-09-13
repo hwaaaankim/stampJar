@@ -125,10 +125,13 @@
 									<a th:href="@{|/contest/excellentDetail/${e.id}|}" >
 										<img th:src="@{${e.firstImage}}" alt="대표이미지">
 									</a>
+									<div class="over-wrap">
+										<p th:text="${e.subject}"></p>
+									</div>
 								</div>
 								<div class="portfolio-desc">
-									<h3><a th:href="@{|/contest/excellentDetail/${e.id}|}"># [[${e.name}]]</a></h3>
-									<span><a th:href="@{|/contest/excellentDetail/${e.id}|}"># [[${e.author}]]</a> <a th:href="@{|/contest/excellentDetail/${e.id}|}"># [[${e.prizeName}]]</a> <a th:href="@{|/contest/excellentDetail/${e.id}|}"># [[${e.subject}]]</a></span>
+									<h3><a class="port-title" th:href="@{|/contest/excellentDetail/${e.id}|}">[작품명 : [[${e.name}]] ]</a></h3>
+									<span class="port-content"><a th:href="@{|/contest/excellentDetail/${e.id}|}">[작가명 : [[${e.author}]] ]</a> <a th:href="@{|/contest/excellentDetail/${e.id}|}">[수상 : [[${e.prizeName}]] ]</a></span>
 								</div>
 							</div>
 						</article>

@@ -12,7 +12,7 @@ import com.dev.OnlineStamp.model.exhibition.Exhibition;
 @Repository
 public interface ExhibitionRepository extends JpaRepository<Exhibition, Long>{
 
-	Page<Exhibition> findAllBySort(Pageable pageable, Boolean sort);
+	Page<Exhibition> findAllBySortOrderByPrizeIndexAsc(Pageable pageable, Boolean sort);
 	
 	Page<Exhibition> findAllBySubjectAndSort(Pageable pageable, String subject, Boolean sort);
 	
