@@ -690,6 +690,10 @@ span.port-content > a{
 	margin-right:30px;
 	cursor:default;
 }
+.symbol-mini-text-wrap{
+	padding-left:20px;
+	margin-bottom:-20px;
+}
 .symbol-color-wrap button.red{
 	background-color:rgba(218, 41, 28);
 }
@@ -698,4 +702,15 @@ span.port-content > a{
 }
 .symbol-color-wrap button.yellow{
 	background-color:rgba(242,169,0);
+}
+.color-white h1, .color-white span{
+	color:white !important;
+}
+.team-image{
+	padding:20px;
+}
+.team-image img{
+	border:2px solid rgba(0,0,0,0.6);
+	border-radius:10px;
+	margin:0 auto;
 }
