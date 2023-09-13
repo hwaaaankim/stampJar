@@ -17,8 +17,8 @@
 }
 
 :root { 
-	--cnvs-themecolor: #3e8de3; 
-	--cnvs-themecolor-rgb: 62, 141, 227; 
+  --cnvs-themecolor: #e62310;
+  --cnvs-themecolor-rgb: 230,35,16;
 	--cnvs-primary-font: "Noto Sans KR", sans-serif; 
 	--cnvs-body-font: "Noto Sans KR", sans-serif;
 }
@@ -512,8 +512,7 @@
 	margin-top:6rem !important;
 }
 .opening-comment{
-	width:80%;
-	text-align:center;
+	text-align:left;
 	margin:0 auto;
 }
 .opening-comment blockquote{
@@ -525,6 +524,17 @@
 	line-height:1.5;
 	font-size:1.5rem;
 }	
+.opening-comment .opening-title{
+	font-size:1.8rem;
+	font-weight:600;
+}
+.opening-comment .opening-title p span{
+	color: #e62310;
+}	
+.opening-comment .opening-content p{
+	font-size:1.2rem;
+	font-weight:400;
+}
 .history-text{
 	color:black;
 	text-align:center;
@@ -649,4 +659,43 @@ span.port-content > a{
 }
 .share-btn i{
 	margin-left:10px;
+}
+.opening-tabs{
+	width:100%;
+	margin:0 auto;
+	justify-content:space-between;
+	text-align:center;
+}
+.opening-tabs li button{
+	width:100%;
+}
+.opening-img-wrap{
+	position:absolute;
+	bottom:0px;
+	right:30px;
+}
+.symbol-text-wrap p{
+	margin-bottom:0px;
+	line-height:1.4;
+	color:rgba(0,0,0,0.8);
+}
+.symbol-color-wrap{
+	justify-content:center;
+}
+.symbol-color-wrap button{
+	width:120px;
+	height:120px;
+	border-radius:50%;
+	border:none;
+	margin-right:30px;
+	cursor:default;
+}
+.symbol-color-wrap button.red{
+	background-color:rgba(218, 41, 28);
+}
+.symbol-color-wrap button.orange{
+	background-color:rgba(232, 119, 34);
+}
+.symbol-color-wrap button.yellow{
+	background-color:rgba(242,169,0);
 }

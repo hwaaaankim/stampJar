@@ -12746,8 +12746,8 @@ fieldset:disabled .btn {
   }
 }
 :root {
-  --cnvs-themecolor: #094bad;
-  --cnvs-themecolor-rgb: 9, 75, 173;
+  --cnvs-themecolor: #e62310;
+  --cnvs-themecolor-rgb: 230,35,16;
   --bs-link-color: var(--cnvs-themecolor);
   --bs-link-color-rgb: var(--cnvs-themecolor-rgb);
   --bs-link-hover-color: var(--cnvs-heading-color);
@@ -22192,7 +22192,7 @@ td.actions {
   --cnvs-btn-padding-y: 0.5rem;
   --cnvs-btn-fontsize: 1rem;
   --cnvs-btn-color: var(--cnvs-themecolor);
-  --cnvs-btn-color-dark: #094bad;
+  --cnvs-btn-color-dark: #e62310;
   --cnvs-btn-color-light: #e9ecef;
   --cnvs-btn-color-hover: var(--cnvs-btn-color-dark);
   --cnvs-btn-lineheight: calc(var(--cnvs-btn-fontsize) * 1.6);

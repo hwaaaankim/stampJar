@@ -7,92 +7,6 @@
 <body class="stretched" data-menu-breakpoint="1200">
 
 	<div id="wrapper">
-		<div class="mfp-hide" id="gdpr-preferences">
-			<div class="block mx-auto bg-white gdpr-cookie-settings" style="max-width: 800px;">
-				<div class="p-5" style="max-height: 400px; overflow-y: scroll; -webkit-overflow-scrolling: touch;">
-					<h4 class="mb-3">개인정보처리방침</h4>
-					<p class="mb-5">개인정보처리방침에 대한 안내 메시지.</p>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item px-0 py-4">
-							<div class="row">
-								<div class="col">
-									<div class="toggle mb-0">
-										<div class="toggle-header">
-											<div class="toggle-icon">
-												<i class="toggle-closed uil uil-plus"></i>
-												<i class="toggle-open uil uil-minus"></i>
-											</div>
-											<div class="toggle-title">
-												개인정보처리방침
-											</div>
-										</div>
-										<div class="toggle-content ps-4">
-											개인정보처리방침에 대한 안내 메시지.
-										</div>
-									</div>
-								</div>
-								<div class="col-auto text-end">
-									<small><strong>REQUIRED</strong></small>
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item px-0 py-4">
-							<div class="row">
-								<div class="col">
-									<div class="toggle mb-0">
-										<div class="toggle-header">
-											<div class="toggle-icon">
-												<i class="toggle-closed uil uil-plus"></i>
-												<i class="toggle-open uil uil-minus"></i>
-											</div>
-											<div class="toggle-title">
-												개인정보처리방침
-											</div>
-										</div>
-										<div class="toggle-content ps-4">
-											개인정보처리방침에 대한 안내 메시지.
-										</div>
-									</div>
-								</div>
-								<div class="col-auto text-end">
-									<small><strong>REQUIRED</strong></small>
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item px-0 py-4">
-							<div class="row">
-								<div class="col">
-									<div class="toggle mb-0">
-										<div class="toggle-header">
-											<div class="toggle-icon">
-												<i class="toggle-closed uil uil-plus"></i>
-												<i class="toggle-open uil uil-minus"></i>
-											</div>
-											<div class="toggle-title">
-												Youtube <small>(Hosting Video Platform by Google Inc.)</small>
-											</div>
-										</div>
-										<div class="toggle-content ps-4">
-											개인정보처리방침에 대한 안내 메시지.
-										</div>
-									</div>
-								</div>
-								<div class="col-auto text-end">
-									<div class="switch d-inline-block">
-										<input id="switch-toggle-youtube" class="switch-toggle switch-toggle-flat switch-flat-mini" type="checkbox" checked data-cookie-name="canvas-gdpr-youtube">
-										<label class="m-0" for="switch-toggle-youtube"></label>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="section text-center p-4 m-0 border-top">
-					<a href="#" class="btn btn-primary gdpr-save-cookies">Save Preferences</a><br>
-					<a href="#" class="btn btn-link text-muted"><small>Privacy Policy</small></a>
-				</div>
-			</div>
-		</div>
 		<header id="header" class="transparent-header dark"
 			th:replace="fragments/front/common :: headMenu('white')"> </header>
 		<section
@@ -139,92 +53,230 @@
 
 		<section id="content">
 			<div class="content-wrap">
-				 <div class="container mt-5 mb-10">
-	                <div class="title-block">
-	                    <h1>전시회 오프닝</h1>
-	                    <span># 전시회 오프닝 이미지 영역 입니다.</span>
-	                    <span># 오프라인 전시관 등 다양한 이미지를 배치할 수 있습니다.</span>
-	                </div>
-	            </div>
-				<div class="container" id="opening">
-					<div class="swiper-container-wrapper row">
-						<div class="swiper-container gallery-top col-lg-9" style="padding:0px;">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img height="1000px" src="/front/images/new/bg01.jpg">
+	            <div class="container">
+	            	<ul class="opening-tabs nav canvas-alt-tabs2 tabs nav-pills mb-3 row" id="canvas-tab-nav2" role="tablist">
+						<li class="nav-item col-4" role="presentation">
+							<button class="nav-link active" id="canvas-home-nav2-tab" data-bs-toggle="pill"
+								data-bs-target="#home-nav2" type="button" role="tab" aria-controls="canvas-home-nav2"
+								aria-selected="true">전시회 소개</button>
+						</li>
+						<li class="nav-item col-4" role="presentation">
+							<button class="nav-link" id="canvas-profile-nav2-tab" data-bs-toggle="pill"
+								data-bs-target="#profile-nav2" type="button" role="tab" aria-controls="canvas-profile-nav2"
+								aria-selected="false">전시회 상징</button>
+						</li>
+						<li class="nav-item col-4" role="presentation">
+							<button class="nav-link" id="canvas-contact-nav2-tab" data-bs-toggle="pill"
+								data-bs-target="#contact-nav2" type="button" role="tab" aria-controls="canvas-contact-nav2"
+								aria-selected="false">역대 전시회 개최현황</button>
+						</li>
+					</ul>
+					<div id="canvas-tab-content2" class="tab-content">
+						<div class="tab-pane fade show active" id="home-nav2" role="tabpanel" aria-labelledby="canvas-home-nav2-tab"
+							tabindex="0">
+							<div class="opening-comment text-center">
+				            	<blockquote class="opening-title">
+									<p>궁금한 우표 '이야기'</p>
+									<p><span>2023년 대한민국 우표전시회</span></p>
+								</blockquote>
+								<blockquote class="opening-content">	
+									<p>2023 대한민국 우표전시회가 </p>
+									<p>9월 21일부터 28일까지 세종문화회관에서 개최됩니다.</p>
+									<p>일상 회복에 성큼 가까워진 만큼 오프라인 현장에서 여러분과 소통하며</p>
+									<p>작년보다 더욱 풍성한 볼거리와 다채로운 체험을 통해 우표의 가치를 전달하려고 합니다.</p>
+									<p>작년 NFT 우표 콘텐츠에 이어 이번 전시회에서는 Generative AI, AI휴먼 전시해설사, AI 프롬프트 교육 등</p>
+									<p>디지털 기술을 활용하여 우표에 담긴 이야기를 더욱 흥미롭게 전달하고, 다양한 체험을 제공할 예정입니다.</p>
+								</blockquote>
+			
+								<blockquote class="opening-content">	
+									<p>디지털 콘텐츠뿐만 아니라 이야기 할머니, 우표의 원도 원화 전시물 등을 통해</p>
+									<p>우표에 표현된 역사적 사건이나 문화적 의미를 되새겨보는 아날로그 공간도 마련되어 있습니다.</p>
+									<p>또한 146점의 우수한 우표작품을 온·오프라인에 하이브리드로 전시를 진행합니다.</p>
+									<p>대한민국 우표전시회는 그동안 정성스럽게 준비한 우취 작품들을 출품한 수집가들은 물론 </p>
+									<p>모든 사람들이 함께하는 축제의 장입니다.</p>
+									<p>작은 우표 속에 담아진 이야기를 펼쳐 낼 2023 대한민국 우표전시회를 통해</p>
+									<p>여러분의 새로운 이야기들을 만들어가시길 바랍니다.</p>
+									<p>감사합니다.</p>
+								</blockquote>
+							</div>
+							<div class="container">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/SZEflIVnhH8" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="profile-nav2" role="tabpanel" aria-labelledby="canvas-profile-nav2-tab"
+							tabindex="0">
+							<div class="row justify-content-center col-mb-50 mb-0 mt-10">
+								<div class="col-sm-6 col-lg-6">
+									<div class="team">
+										<div class="team-image">
+											<img src="/front/images/new/123.png" alt="LOGO" class="rounded-6">
+											</div>
+									</div>
 								</div>
-								<div class="swiper-slide">
-									<img height="1000px" src="/front/images/new/bg01.jpg">
-								</div>
-								<div class="swiper-slide">
-									<img height="1000px" src="/front/images/new/bg01.jpg">
-								</div>
-								<div class="swiper-slide">
-									<img height="1000px" src="/front/images/new/bg01.jpg">
-								</div>
-								<div class="swiper-slide">
-									<img height="1000px" src="/front/images/new/bg01.jpg">
-								</div>
-								<div class="swiper-slide">
-									<img height="1000px" src="/front/images/new/bg01.jpg">
+		
+								<div class="col-sm-6 col-lg-6">
+									<div class="team">
+										<div class="team-image">
+											<img src="/front/images/new/123.png" alt="LOGO">
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="swiper-button-next"></div>
-							<div class="swiper-button-prev"></div>
-						</div>
-						<div class="swiper-container gallery-thumbs col-lg-3">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><img height="1000px" src="/front/images/new/bg01.jpg"></div>
-								<div class="swiper-slide"><img height="1000px" src="/front/images/new/bg01.jpg"></div>
-								<div class="swiper-slide"><img height="1000px" src="/front/images/new/bg01.jpg"></div>
-								<div class="swiper-slide"><img height="1000px" src="/front/images/new/bg01.jpg"></div>
-								<div class="swiper-slide"><img height="1000px" src="/front/images/new/bg01.jpg"></div>
-								<div class="swiper-slide"><img height="1000px" src="/front/images/new/bg01.jpg"></div>
+							<div class="symbol-text-wrap text-center">
+								<p>2023대한민국 온라인 우표전시회의 로고는 신뢰와 소통의 상징인 우정 제비가</p>
+								<p>역사상 최초로 선보이는 새로운 방식의 우표 전시회를 향해 힘차게 날아가는 것을 표현하여,</p>
+								<p>국민들에게 가까이 다가가 희망의 메시지를 전한다는 의미를 담았습니다.</p>
+							</div>
+							<div class="row justify-content-center col-mb-50 mb-0 mt-10">
+								<div class="col-sm-6 col-lg-6">
+									<div class="team">	
+										<div class="symbol-mini-text-wrap">
+											<span style="color:red;font-size:20px;">&#183;</span><span style="font-weight:600;margin-left:5px;">가로형</span>
+										</div>
+										<div class="team-image">
+											<img src="/front/images/new/123.png" alt="LOGO" class="rounded-6">
+										</div>
+									</div>
+								</div>
+		
+								<div class="col-sm-6 col-lg-6">
+									<div class="team">
+										<div class="symbol-mini-text-wrap">
+											<span style="color:red;font-size:20px;">&#183;</span><span style="font-weight:600;margin-left:5px;">세로형</span>
+										</div>
+										<div class="team-image">
+											<img src="/front/images/new/123.png" alt="LOGO">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="symbol-color-wrap text-center row">
+								<div class="col-2">
+									<button class="red"></button><br>
+									<h3 class="mb-0 mt-5">PANTONE 485 C</h3>
+									<p>C0 M95 Y100 K0</p>
+								</div>
+								<div class="col-2">
+									<button class="orange"></button><br>
+									<h3 class="mb-0 mt-5">PANTONE 158 C</h3>
+									<p>C0 M62 Y97 K0</p>
+								</div>
+								<div class="col-2">
+									<button class="yellow"></button><br>
+									<h3 class="mb-0 mt-5">PANTONE 130 C</h3>
+									<p>C0 M32 Y100 K0</p>
+								</div>
+								
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="container mt-10 mb-10">
-	                <div class="title-block">
-	                    <h1>전시회 오프닝 멘트</h1>
-	                    <span># 다시 찾는 희망, 2023 대한민국 우표전시회.</span>
-	                    <span># 우표, 지속가능한 세상을 말하다.</span>
-	                </div>
-	            </div>
-	            <div class="container">
-		            <div class="opening-comment">
-		            	<blockquote>
-							<p>67년 우표 역사가 깃든 2021 대한민국 우표전시회를,</p>
-							<p>작년에 이어 올해도 온라인으로 개최하게 되었습니다.</p>
-						</blockquote>
-						<blockquote>	
-							<p>코로나19로 인해 잃어버린 일상을 다시 찾아가는 의지를 담아</p>
-							<p>‘우표, 지속가능한 세상을 말하다’라는 주제로 희망의 목소리를 전하고자 합니다.</p>
-						</blockquote>
-						<blockquote>
-							<p>67년 우표 역사가 깃든 2021 대한민국 우표전시회를 작년에 이어 올해도 온라인으로 개최합니다.</p>
-							<p>코로나19로 인해 잃어버린 일상을 다시 찾아가는 의지를 담아</p>
-							<p>‘우표, 지속가능한 세상을 말하다’라는 주제로 희망의 목소리를 전하고자 합니다.</p>
-						</blockquote>
-	
-						<blockquote>
-							<p>2023 대한민국 우표전시회가 여러분에게 희망을 찾을 수 있는 계기가 되길 소망해 봅니다.</p>
-							<p>언제 어디서나 편안하게 즐길 수 있는 랜선 우표 축제에 오신 여러분을 진심으로 환영합니다.</p>
-						</blockquote>
-					</div>
-	            </div>
-	            <div class="container mt-10 mb-10">
-	                <div class="title-block">
-	                    <h1>전시회 오프닝 영상</h1>
-	                    <span># 다시 찾는 희망, 2023 대한민국 우표전시회.</span>
-	                    <span># 우표, 지속가능한 세상을 말하다.</span>
-	                </div>
-	            </div>
-	            <div class="container">
-	            	<div class="gdpr-container" data-cookie-name="canvas-gdpr-youtube" data-cookies="true" data-cookie-content='<iframe width="560" height="315" src="https://www.youtube.com/embed/SZEflIVnhH8" allowfullscreen></iframe>'>
-						<div class="gdpr-blocked-message bg-dark">
-							<i class="fa-brands fa-youtube h1 text-light mb-3"></i>
-							<p class="text-light mb-2">This content has been blocked in your <a href="#gdpr-preferences" class="text-light" data-lightbox="inline">Privacy Preferences</a>.</p>
+						<div class="tab-pane fade" id="contact-nav2" role="tabpanel" aria-labelledby="canvas-contact-nav2-tab"
+							tabindex="0">
+							<div class="row">
+								<div class="col-md-6 col-lg-6 mt-6">
+									<div class="grid-container row row-cols-1" data-big="1"
+										data-lightbox="gallery"
+										style="-bs-gutter-x: 30px; --bs-gutter-y: 30px;">
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark"data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-6 mt-6">
+		
+									<div class="grid-container row row-cols-2" data-big="2"
+										data-lightbox="gallery" style="-bs-gutter-x: 30px; --bs-gutter-y: 30px;">
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark"data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a> 
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark"data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a> 
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark"data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a> 
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark"data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a> 
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark"data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a> 
+										<a class="col" href="/front/images/new/1.jpg"
+											data-lightbox="gallery-item" data-zoom="true" title="# 전시회 주제가 작성되는 영역 입니다.">
+											<div class="grid-inner">
+												<img src="/front/images/new/1.jpg" alt="#">
+												<div class="bg-overlay">
+													<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+														<span># 전시회 주제가 작성되는 영역 입니다.</span>
+													</div>
+													<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+												</div>
+											</div>
+											<p class="history-text">2023 온라인 우표 전시회</p>
+										</a>
+									</div>
+								</div>
+								
+							</div>
 						</div>
 					</div>
 	            </div>
@@ -236,55 +288,5 @@
 	</div>
 
 	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
-	<script>
-		$(function() {
-			var galleryThumbs = new Swiper(".gallery-thumbs", {
-				centeredSlides : true,
-				centeredSlidesBounds : true,
-				direction : "horizontal",
-				spaceBetween : 10,
-				slidesPerView : 3,
-				freeMode : false,
-				watchSlidesVisibility : true,
-				watchSlidesProgress : true,
-				watchOverflow : true,
-				autoplay:{
-					delay:3000
-				},
-				breakpoints : {
-					480 : {
-						direction : "vertical",
-						slidesPerView : 3
-					}
-				}
-			});
-			var galleryTop = new Swiper(".gallery-top", {
-				direction : "horizontal",
-				spaceBetween : 10,
-				navigation : {
-					nextEl : ".swiper-button-next",
-					prevEl : ".swiper-button-prev"
-				},
-				a11y : {
-					prevSlideMessage : "Previous slide",
-					nextSlideMessage : "Next slide",
-				},
-				keyboard : {
-					enabled : true,
-				},
-				thumbs : {
-					swiper : galleryThumbs
-				}
-			});
-			galleryTop.on("slideChangeTransitionStart", function() {
-				galleryThumbs.slideTo(galleryTop.activeIndex);
-			});
-			galleryThumbs.on("transitionStart", function() {
-				galleryTop.slideTo(galleryThumbs.activeIndex);
-			});
-		});
-	</script>
 </body>
 </html>
