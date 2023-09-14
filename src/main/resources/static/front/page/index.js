@@ -62,7 +62,7 @@ var swiper = new Swiper(".swiper-tab-container", {
 	paginationClickable: true,
 	loop: true,
 	paginationBulletRender: function(index, className) {
-		var tabsName = ["영롱한 전설", "따뜻한 동화", "교감하는 대화"];
+		var tabsName = ["[우표전설관]", "[우표예술관]", "[우표대화관]", "[우표역사관]"];
 		if (index === tabsName.length - 1) {
 			return '<span id="tab-swiper-' + index + '" class="' + className + '">' + tabsName[index] + "</span>";
 		}
