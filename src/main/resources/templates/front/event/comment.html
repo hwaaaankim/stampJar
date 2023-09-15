@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('만족도 조사')">
+    
+</head>
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('white')">
+         
+        </header>
+		<section class="page-title dark bg-transparent page-title-parallax parallax border-0">
+			<img src="/front/images/new/m11.jpg" class="parallax-bg">
+			<div class="container">
+				<div class="page-title-row pt-5 pb-3">
+
+					<div class="page-title-content">
+						<span class="color fw-medium my-0">2023 Korea Philateric
+							Exhibition</span>
+						<h1>
+							<div class="fw-bold display-5 nocolor">대한민국 우표전시회 만족도 조사</div>
+						</h1>
+
+						<div class="mt-4 pt-3">
+							<a href="/event/eventOne"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">이벤트 안내 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+							<a href="/event/prize"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">부대행사 안내 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+						</div>
+					</div>
+
+					<nav aria-label="breadcrumb" class="d-none d-lg-block">
+						<ol class="breadcrumb"
+							style="-bs-breadcrumb-divider: '&amp;#62;';">
+							<li class="breadcrumb-item"><a href="/index"><i
+									class="uil uil-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#">이벤트</a></li>
+							<li class="breadcrumb-item active" aria-current="page">만족도 조사</li>
+						</ol>
+					</nav>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			
+			<div class="content-wrap pt-0">
+				<div class="container mt-5 mb-10">
+						<div class="title-block">
+							<h1>이벤트 만족도 조사</h1>
+	
+						</div>
+					</div>
+				<div class="container">
+
+					<div class="form-widget" data-alert-type="false">
+						<div class="form-result"></div>
+						<div class="row">
+							<div class="col-lg-12">
+								<form class="row" id="feedback-form" action="include/form.php" method="post" enctype="multipart/form-data">
+									<div class="form-process">
+										<div class="css3-spinner">
+											<div class="css3-spinner-scaler"></div>
+										</div>
+									</div>
+									<div class="col-6 form-group">
+										<label>성함 : </label>
+										<input type="text" name="feedback-form-name" id="feedback-form-name" class="form-control required" value="" placeholder="Enter your Full Name">
+									</div>
+									<div class="col-6 form-group">
+										<label>방문하신 날짜</label>
+										<input type="text" class="form-control datepicker required" name="feedback-form-date-of-visit" id="feedback-form-date-of-visit" value="" placeholder="MM/DD/YYYY" data-date-start-date="-2m" data-date-end-date="0d">
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label>재미 : </label>
+											<div class="btn-group d-flex" role="group">
+												<input type="radio" class="btn-check required" name="feedback-form-cleanliness" id="feedback-form-cleanliness-1" value="Terrible">
+												<label class="btn btn-outline-danger" for="feedback-form-cleanliness-1"><i class="bi-emoji-dizzy"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-cleanliness" id="feedback-form-cleanliness-2" value="Bad">
+												<label class="btn btn-outline-danger" for="feedback-form-cleanliness-2"><i class="bi-emoji-frown"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-cleanliness" id="feedback-form-cleanliness-3" value="Average">
+												<label class="btn btn-outline-warning" for="feedback-form-cleanliness-3"><i class="bi-emoji-expressionless"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-cleanliness" id="feedback-form-cleanliness-4" value="Good">
+												<label class="btn btn-outline-success" for="feedback-form-cleanliness-4"><i class="bi-emoji-smile"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-cleanliness" id="feedback-form-cleanliness-5" value="Awesome">
+												<label class="btn btn-outline-success" for="feedback-form-cleanliness-5"><i class="bi-emoji-laughing"></i></label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>볼거리 : </label>
+											<div class="btn-group d-flex">
+												<input type="radio" class="btn-check" name="feedback-form-service" id="feedback-form-service-1" value="Terrible">
+												<label for="feedback-form-service-1" class="btn btn-outline-danger ls-0 text-transform-none"><i class="bi-emoji-dizzy"></i></label>
+
+												<input type="radio" class="btn-check" name="feedback-form-service" id="feedback-form-service-2" value="Bad">
+												<label for="feedback-form-service-2" class="btn btn-outline-danger ls-0 text-transform-none"><i class="bi-emoji-frown"></i></label>
+
+												<input type="radio" class="btn-check" name="feedback-form-service" id="feedback-form-service-3" value="Average">
+												<label for="feedback-form-service-3" class="btn btn-outline-warning ls-0 text-transform-none"><i class="bi-emoji-expressionless"></i></label>
+
+												<input type="radio" class="btn-check" name="feedback-form-service" id="feedback-form-service-4" value="Good">
+												<label for="feedback-form-service-4" class="btn btn-outline-success ls-0 text-transform-none"><i class="bi-emoji-smile"></i></label>
+
+												<input type="radio" class="btn-check" name="feedback-form-service" id="feedback-form-service-5" value="Awesome">
+												<label for="feedback-form-service-5" class="btn btn-outline-success ls-0 text-transform-none"><i class="bi-emoji-laughing"></i></label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>유익함 : </label>
+											<div class="btn-group d-flex">
+												<input type="radio" class="btn-check required" name="feedback-form-food" id="feedback-form-food-1" value="Terrible">
+												<label class="btn btn-outline-danger" for="feedback-form-food-1"><i class="bi-emoji-dizzy"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-food" id="feedback-form-food-2" value="Bad">
+												<label class="btn btn-outline-danger" for="feedback-form-food-2"><i class="bi-emoji-frown"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-food" id="feedback-form-food-3" value="Average">
+												<label class="btn btn-outline-warning" for="feedback-form-food-3"><i class="bi-emoji-expressionless"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-food" id="feedback-form-food-4" value="Good">
+												<label class="btn btn-outline-success" for="feedback-form-food-4"><i class="bi-emoji-smile"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-food" id="feedback-form-food-5" value="Awesome">
+												<label class="btn btn-outline-success" for="feedback-form-food-5"><i class="bi-emoji-laughing"></i></label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>ETC : </label>
+											<div class="btn-group d-flex">
+												<input type="radio" class="btn-check required" name="feedback-form-ambience" id="feedback-form-ambience-1" value="Terrible">
+												<label class="btn btn-outline-danger" for="feedback-form-ambience-1"><i class="bi-emoji-dizzy"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-ambience" id="feedback-form-ambience-2" value="Bad">
+												<label class="btn btn-outline-danger" for="feedback-form-ambience-2"><i class="bi-emoji-frown"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-ambience" id="feedback-form-ambience-3" value="Average">
+												<label class="btn btn-outline-warning" for="feedback-form-ambience-3"><i class="bi-emoji-expressionless"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-ambience" id="feedback-form-ambience-4" value="Good">
+												<label class="btn btn-outline-success" for="feedback-form-ambience-4"><i class="bi-emoji-smile"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-ambience" id="feedback-form-ambience-5" value="Awesome">
+												<label class="btn btn-outline-success" for="feedback-form-ambience-5"><i class="bi-emoji-laughing"></i></label>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>ETC : </label>
+											<div class="btn-group d-flex">
+												<input type="radio" class="btn-check required" name="feedback-form-payment" id="feedback-form-payment-1" value="Terrible">
+												<label class="btn btn-outline-danger" for="feedback-form-payment-1"><i class="bi-emoji-dizzy"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-payment" id="feedback-form-payment-2" value="Bad">
+												<label class="btn btn-outline-danger" for="feedback-form-payment-2"><i class="bi-emoji-frown"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-payment" id="feedback-form-payment-3" value="Average">
+												<label class="btn btn-outline-warning" for="feedback-form-payment-3"><i class="bi-emoji-expressionless"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-payment" id="feedback-form-payment-4" value="Good">
+												<label class="btn btn-outline-success" for="feedback-form-payment-4"><i class="bi-emoji-smile"></i></label>
+
+												<input type="radio" class="btn-check required" name="feedback-form-payment" id="feedback-form-payment-5" value="Awesome">
+												<label class="btn btn-outline-success" for="feedback-form-payment-5"><i class="bi-emoji-laughing"></i></label>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 form-group">
+										<label>하고싶으신 말씀:</label>
+										<textarea name="feedback-form-more-feedback" id="feedback-form-more-feedback" class="form-control" cols="30" rows="8"></textarea>
+									</div>
+									<div class="col-12">
+										<div class="row">
+											<div class="col-6 form-group">
+												<label>어떻게 알게 되셨나요??</label>
+												<select class="form-select required" name="feedback-form-know-us" id="feedback-form-know-us">
+													<option value="">-- Select One --</option>
+													<option value="Google">Google</option>
+													<option value="Social Media">Social Media</option>
+													<option value="Friends">Friends</option>
+													<option value="Advertisement">Advertisement</option>
+													<option value="Others">Others</option>
+												</select>
+											</div>
+											<div class="col-6 form-group">
+												<label>다시 방문하고 싶으신가요?</label>
+												<div class="btn-group d-flex">
+													<input type="radio" class="btn-check required" name="feedback-form-visit-again" id="feedback-form-visit-again-yes" value="Terrible">
+													<label class="btn btn-outline-success text-transform-none ls-0" for="feedback-form-visit-again-yes">Yes</label>
+
+													<input type="radio" class="btn-check required" name="feedback-form-visit-again" id="feedback-form-visit-again-no" value="Bad">
+													<label class="btn btn-outline-danger text-transform-none ls-0" for="feedback-form-visit-again-no">No</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<button type="submit" name="feedback-form-submit" class="btn btn-secondary">제출하기</button>
+									</div>
+
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+
+	</div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="/front/js/components/datepicker.js"></script>
+
+</body>
+</html>
