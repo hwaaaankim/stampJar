@@ -1,13 +1,19 @@
+.widget .widget-title{
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.4;
+}
 .widget h3 {
-	font-size: 20px;
-	font-weight: 400;
+	font-size: 35px;
+	font-weight: 600;
 	line-height: 1.4;
 }
 
 .widget p {
-	font-size: 15px !important;
+	font-size: 18px !important;
 	font-weight: 400 !important;
 	line-height: 1.4 !important;
+	margin-bottom:0px;
 }
 
 .title-block span {
@@ -224,7 +230,7 @@
 	transition: left 0.2s ease-out;
 }
 .swiper-tab-pagination{
-	margin-bottom:150px;
+	margin-bottom:100px;
 	height:100%;
 }
 .swiper-tab-container .swiper-pagination-bullet {
@@ -628,7 +634,7 @@ table.process-table tbody td:nth-child(2){
 }
 table.process-table tbody td:nth-last-child(1), table.process-table thead th:nth-last-child(1){
 	border-right:none;
-	text-align:center;
+	text-align:left;
 } 
 table.process-table thead{
 	background-color:rgba(0,0,0,0.2);
@@ -740,4 +746,7 @@ span.port-content > a{
 	border:2px solid rgba(0,0,0,0.6);
 	border-radius:10px;
 	margin:0 auto;
+}
+.history-wrap a div.grid-inner{
+	max-height:400px;
 }

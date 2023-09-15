@@ -7,30 +7,39 @@
 <body class="stretched" data-menu-breakpoint="1200">
 
 	<div id="wrapper">
-		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('exellent')">
+		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('white')">
          
         </header>
-		<section class="page-title dark page-title-center page-title-parallax parallax include-header py-6">
-			<img src="/front/images/new/bg01.jpg" class="parallax-bg">
+		<section class="page-title dark bg-transparent page-title-parallax parallax border-0">
+			<img src="/front/images/new/no.png" class="parallax-bg">
 			<div class="container">
-				<div class="page-title-row py-4">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb mt-0 mb-4" style="--bs-breadcrumb-divider: '&#62;'; --bs-breadcrumb-item-padding-x:1rem">
-							<li class="breadcrumb-item"><a href="#"><i class="uil uil-home"></i></a></li>
-							<li class="breadcrumb-item"><a href="#">Middle Menu</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Page Title</li>
-						</ol>
-					</nav>
-					<div class="page-title-content">
-						<h1>일반작품전시</h1>
-						<span>훌륭한 출품작들을 감상해 보세요.</span>
+				<div class="page-title-row pt-5 pb-3">
 
-						<div class="page-title-buttons mt-5">
-							<button class="button button-border button-light rounded px-5 mb-0" data-scrollto="#content" data-offset="60">수상작 감상하기<i class="uil uil-arrow-circle-down ms-1"></i></button>
-							<a href="#" class="button button-border button-light rounded px-5 mb-0" data-scrollto="#explore-more-elements">일반 출품작 감상하기<i class="uil uil-cell ms-1"></i></a>
-							<a href="#" target="_blank" class="button button-border button-light rounded px-5 mb-0"><i class="uil uil-shopping-cart me-1"></i>링크 복사</a>
+					<div class="page-title-content">
+						<span class="color fw-medium my-0">2023 Korea Philateric
+							Exhibition</span>
+						<h1>
+							<div class="fw-bold display-5 nocolor">온라인전시회 일반출품작 전시</div>
+						</h1>
+
+						<div class="mt-4 pt-3">
+							<button class="button button-border button-dark rounded px-5 mb-0" data-scrollto="#content" data-offset="60">수상작 감상하기<i class="uil uil-arrow-circle-down ms-1"></i></button>
+							<a href="/contest/excellent"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">일반 수상작 감상하기 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
 						</div>
 					</div>
+
+					<nav aria-label="breadcrumb" class="d-none d-lg-block">
+						<ol class="breadcrumb"
+							style="-bs-breadcrumb-divider: '&amp;#62;';">
+							<li class="breadcrumb-item"><a href="/index"><i
+									class="uil uil-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#">우표작품전시</a></li>
+							<li class="breadcrumb-item active" aria-current="page">일반출품작전시</li>
+						</ol>
+					</nav>
+
 				</div>
 			</div>
 		</section>
