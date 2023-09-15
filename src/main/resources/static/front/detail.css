@@ -756,3 +756,10 @@ span.port-content > a{
 	padding-top:30px;
 	border-top:2px solid black;
 }
+.sub-text-wrap{
+	margin-top:10px;
+}
+.sub-text-wrap span{
+	font-size:16px;
+	font-weight:600;
+}
