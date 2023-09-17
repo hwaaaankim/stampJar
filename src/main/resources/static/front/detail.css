@@ -763,3 +763,172 @@ span.port-content > a{
 	font-size:16px;
 	font-weight:600;
 }
+.main-contest div.grid-inner{
+	
+	height:350px !important;
+}
+@media(max-width:600px){
+	.main-text-area h3{
+		font-size:13px;
+		font-weight:500;
+	}
+	.main-text-area h1{
+		font-size:22px;
+	}
+	.mt-10{
+		margin-top:6rem !important;
+	}
+	.main-contest div.grid-inner{
+		height:250px !important;
+	}
+	.m-mb-6{
+		margin-bottom:6rem !important;
+	}
+	#slider > div > div > div.container.mt-5.mb-6 > div > div:nth-child(3) > span{
+		margin-bottom:5px !important;
+		font-weight:500;
+	}
+	#slider > div > div > div.container.mt-5.mb-6 > div > div:nth-child(3){
+		margin-top:2rem;
+	}
+	.m-mt-10{
+		margin-top:4rem !important;
+	}
+	.swiper-tab-container{
+		margin-top:0px;
+	}
+	.swiper-tab-container .swiper-widget{
+		top:0;
+		margin-bottom:20px;
+	} 
+	.swiper-tab-container .swiper-slide {
+		padding:0px;
+	}
+	.widget .widget-title{
+		font-size:26px;
+		font-weight:600;
+		text-decoration:underline;
+		text-align:center;
+	}
+	.title-block{
+		margin-bottom:15px;
+	}
+	.new-notice-wrap li{
+		text-align:center;
+	}
+	.new-notice-wrap li button{
+		height:50px;
+		text-align:center !important;
+	}
+	.opening-img-wrap {
+		position:relative;
+		right:initial;		
+	}
+	.opening-comment blockquote{
+		padding:5px;
+	}
+	.history-text {
+		font-size:1rem;
+		font-weight:400;
+	}
+	.history-wrap a div.grid-inner{
+		max-height:230px !important;
+	}
+	#wrapper > section.page-title.dark.bg-transparent.page-title-parallax.parallax.border-0 > div > div > div > h1 > div{
+		font-size:1.6rem !important;
+	}
+	.sub-text-wrap span{
+		font-size:14px;
+	}
+	#profile-nav2 > ul > li > span.text-dark.fw-semibold{
+		display:block;
+		width:100%;
+	}
+	#contact-nav2 > div > table > thead > tr > th,
+	#content > div > div > table > thead > tr > th{
+		text-align:center;
+	}
+	#contact-nav2 > div > table > tbody > tr > td > p,
+	#content > div > div > table > tbody > tr > td > p{
+		font-size:14px;
+		line-height:1.4;
+	}
+	#wrapper > section.page-title.dark.bg-transparent.page-title-parallax.parallax.border-0 > div.container > div > div > div > button{
+		height:47px;
+		margin-right:0px;
+		margin-left:0px;
+	}
+	#wrapper > section.page-title.dark.bg-transparent.page-title-parallax.parallax.border-0 > div > div > div > div > a{
+		margin-left:0px;
+	}
+	.search-btn{
+		height:47px;
+	}
+	.pagination-wrap{
+		padding-left:10px !important;
+		padding-right:10px;
+	}
+	#content > div.content-wrap.pt-0 > div > div.pagination-wrap > ul > li > a{
+		padding-right:10px;
+		padding-left:10px;
+	}
+	span.port-content > a{
+		font-size:14px;
+	}
+	#wrapper > section.page-title.bg-transparent.page-title-center > div > div > div > div > button{
+		height:47px;
+		width:100%;
+	}
+	#content > div > div > div.row.g-4.mb-5 > article > div > div.col-md-8.p-4{
+		padding-left:0px !important;
+		padding-right:0px !important;
+	}
+	#content > div > div > div.row.g-4.mb-5 > article > div > div.col-md-8.p-4 > div.entry-title.nott > h3 > a{
+		font-size:20px;
+		line-height:1.4;
+	}
+	#content > div > div > div.row.g-4.mb-5 > article > div > div.col-md-8.p-4 > div.entry-content.my-3 > p{
+		line-height:1.4;
+	}
+	.pagination.pagination-circle .page-item .page-link{
+	width:35px;
+	height:35px;
+	
+	}
+	.form-group label{
+		font-size:14px;
+	}
+	#feedback-form > div:nth-child(7) > button{
+		height:47px;
+		width:100%;
+		background-color:#e62310;
+	}
+	#posts > div > div > div > div.entry-meta > ul > li
+	{
+		margin-bottom:0px;
+	}
+	#posts > div > div > div > div.entry-meta > ul > li:nth-child(4),
+	#posts > div > div > div > div.entry-meta > ul > li:nth-child(3){
+		margin-bottom:10px;
+	}
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
