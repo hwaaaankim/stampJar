@@ -10,10 +10,12 @@
 	<div id="wrapper">
 		<header id="header" class="transparent-header"
 			th:replace="fragments/front/common :: headMenu('index')"> </header>
-		<section id="slider" class="slider-element slider-parallax min-vh-60 min-vh-md-100 include-header">
-			<div class="slider-inner">
-				<div data-vbg-autoplay="true" data-vbg="https://youtu.be/_0z_HmXFfzQ?si=35c8sya32LaoF0OU"></div>
-				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.5);">
+		<section id="slider"
+			class="slider-element slider-parallax min-vh-60 min-vh-md-100 include-header">
+			<div class="slider-inner"
+				style="background-image: url('/front/images/new/mainbg.png'); background-size: cover; background-position: center center;">
+
+				<div class="vertical-middle slider-element-fade">
 					<div class="container mt-5 mb-6">
 						<div
 							class="row align-items-center justify-content-center col-mb-80">
@@ -975,16 +977,16 @@
 				<div class="container" style="padding-top: 80px;">
 					<div class="container">
 						<ul class="clients-grid row row-cols-2 row-cols-sm-5">
-							<li class="col"><a target="_blank" href="https://www.koreapost.go.kr/"><img
+							<li class="col"><a href="https://www.koreapost.go.kr/"><img
 									src="/front/images/new/logo/11.png" alt="Clients"></a></li>
 							
-							<li class="col"><a target="_blank" href="https://www.posa.or.kr/portal/main/main.do"><img
+							<li class="col"><a href="https://www.posa.or.kr/portal/main/main.do"><img
 									src="/front/images/new/logo/33.png" alt="Clients"></a></li>
-							<li class="col"><a target="_blank" href="http://www.woopyo.net/default/"><img
+							<li class="col"><a href="http://www.woopyo.net/default/"><img
 									src="/front/images/new/looo.png" alt="Clients"></a></li>
-							<li class="col"><a target="_blank" href="https://stamp.epost.go.kr/"><img
+							<li class="col"><a href="https://stamp.epost.go.kr/"><img
 									src="/front/images/new/logo/55.png" alt="Clients"></a></li>
-							<li class="col"><a target="_blank" href="https://www.stampmuseum.kr"><img
+							<li class="col"><a href="https://blog.naver.com/stampmuseum"><img
 									src="/front/images/new/logo/22.png" alt="Clients"></a></li>		
 						</ul>
 					</div>
@@ -1098,13 +1100,10 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/js/swiper.min.js"></script>
 	<script src="/front/page/index.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
 	<script>
 	  $(document).ready(function() {
-	    $('[data-vbg]').youtube_background({
-	    	'fit-box':true
-	    }); 
+	    $('[data-vbg]').youtube_background(); // 실행
 	  });
 	</script>
 </body>
