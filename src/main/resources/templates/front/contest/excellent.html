@@ -5,7 +5,7 @@
     
 </head>
 <body class="stretched" data-menu-breakpoint="1200">
-
+	<th:block th:replace="fragments/front/common :: transPart"></th:block>
 	<div id="wrapper">
 		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('white')">
          
@@ -23,7 +23,7 @@
 						</h1>
 
 						<div class="mt-4 pt-3 row">
-							<button class="col-lg-3 col-12 button button-border button-dark rounded px-5 mb-0" data-scrollto="#content" data-offset="60">수상작 감상하기<i class="uil uil-arrow-circle-down ms-1"></i></button>
+							<button class="col-lg-3 col-12 button rounded-2 button-dark button-border border-2 mb-0" data-scrollto="#content" data-offset="60">수상작 감상하기<i class="uil uil-arrow-circle-down ms-1"></i></button>
 							<a href="/contest/normal"
 								class="col-lg-3 col-12 button rounded-2 button-dark button-border border-2 me-0 mb-0">일반 출품작 감상하기 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
 							</a>

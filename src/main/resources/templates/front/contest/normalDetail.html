@@ -5,7 +5,7 @@
     
 </head>
 <body class="stretched" data-menu-breakpoint="1200">
-
+	<th:block th:replace="fragments/front/common :: transPart"></th:block>
 	<div id="wrapper">
 		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('white')">
          
@@ -48,34 +48,20 @@
 
 							<div class="row flex-lg-row-reverse g-5">
 								<div class="col-lg-12">
-									<div class="row">
-										<div class="col-3 border-top py-3">
+									<div class="row text-center">
+										<div class="col-4 border-top py-3">
 											<h5 class="mb-1">작가</h5>
 											<p class="text-medium op-08 mb-0" th:text="${ex.author}">John Doe</p>
 										</div>
 
-										<div class="col-3 border-top py-3">
+										<div class="col-4 border-top py-3">
 											<h5 class="mb-1">작품명</h5>
 											<p class="text-medium op-08 mb-0" th:text="${ex.name}">17th March 2022</p>
 										</div>
 
-										<div class="col-3 border-top py-3">
+										<div class="col-4 border-top py-3">
 											<h5 class="mb-1">수상 명</h5>
-											<p class="text-medium op-08 mb-0" th:text="${ex.exprizeName}">17th March 2022</p>
-										</div>
-										<div class="col-3 border-top py-3">
-											<h5 class="mb-1">SNS 공유하기</h5>
-											<div class="d-flex">
-												<a href="#" class="social-icon bg-light si-small border-transparent rounded-circle h-bg-facebook" title="Facebook">
-													<i class="fa-brands fa-facebook-f"></i>
-													<i class="fa-brands fa-facebook-f"></i>
-												</a>
-
-												<a href="#" class="social-icon bg-light si-small border-transparent rounded-circle h-bg-twitter" title="Twitter">
-													<i class="fa-brands fa-twitter"></i>
-													<i class="fa-brands fa-twitter"></i>
-												</a>
-											</div>
+											<p class="text-medium op-08 mb-0" th:text="${ex.prizeName}">17th March 2022</p>
 										</div>
 									</div>
 								</div>

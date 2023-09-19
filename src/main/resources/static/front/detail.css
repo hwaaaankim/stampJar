@@ -1,3 +1,4 @@
+body { position: static !important; top:0px !important; }	
 .widget .widget-title{
 	font-size: 35px;
 	font-weight: 600;
@@ -944,6 +945,10 @@ span.port-content > a{
 	.event-btn{
 		height:47px;
 	}
+	.page-title-parallax{
+		padding-top:30px;
+		padding-bottom:30px;
+	}
 }	
 
 .file-caption.icon-visible .file-caption-name {
@@ -990,7 +995,15 @@ span.port-content > a{
 .btn-group input[type="email"] ~ label.error,
 .btn-group input[type="number"] ~ label.error,
 .btn-group select ~ label.error { display: none !important; }
+iframe.goog-te-banner-frame { display: none !important; }
+.skiptranslate { display: none !important; }
 
+.goog-logo-link { display:none !important; } 
+.goog-te-gadget { color: transparent !important; overflow: hidden;} 
+.goog-te-balloon-frame{display: none !important;} 
+.goog-tooltip {display: none !important;}
+.goog-tooltip:hover {display: none !important;}
+.goog-text-highlight {background-color: transparent !important; border: none !important; box-shadow: none !important;}
 
 
 

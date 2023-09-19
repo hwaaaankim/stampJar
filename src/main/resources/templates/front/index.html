@@ -6,14 +6,14 @@
 </head>
 
 <body class="stretched">
-
+	<th:block th:replace="fragments/front/common :: transPart"></th:block>
 	<div id="wrapper">
 		<header id="header" class="transparent-header"
 			th:replace="fragments/front/common :: headMenu('index')"> </header>
 		<section id="slider" class="slider-element slider-parallax min-vh-60 min-vh-md-100 include-header">
 			<div class="slider-inner" id="main-mobile">
 				<div id="pc-video" data-vbg-autoplay="true" data-vbg="https://youtu.be/TbEyqaaybSw"></div>
-				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.3);">
+				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.2);">
 					<div class="container mt-5 mb-6">
 						<div
 							class="row align-items-center justify-content-center col-mb-80">
@@ -294,13 +294,13 @@
 											<div
 												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
 												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
+													<a href="/notice/noticeDetail" class="entry-image"> <img
 														src="/front/images/new/finish/n.png" alt="#"
 														class="rounded-2">
 														<div class="bg-overlay">
 															<div
 																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">공지사항[번호]
+																<div class="badge bg-light text-dark rounded-pill">공지사항[1]
 																</div>
 															</div>
 														</div>
@@ -309,19 +309,17 @@
 												<div class="col-12 p-1 pt-0">
 													<div class="entry-meta no-separator mb-1 mt-0">
 														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">공지사항
-																	작성일</a></li>
+															<li><a href="/notice/noticeDetail" class="text-uppercase fw-medium">2023.09.20.</a></li>
 														</ul>
 													</div>
 
 													<div class="entry-title nott">
 														<h3>
-															<a href="#">공지사항 제목</a>
+															<a href="/notice/noticeDetail">2023 대한민국 우표전시회를 개최합니다.</a>
 														</h3>
 													</div>
 													<div class="entry-content my-3">
-														<p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+														<p class="mb-0"># 우표의 이야기를 재미있게 공유하기 위하여 4가지의 테마관을....</p>
 													</div>
 												</div>
 											</div>
@@ -329,150 +327,25 @@
 									</div>
 								</main>
 
-								<main class="postcontent col-lg-3">
-									<div class="row g-4 mb-5">
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/n.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">공지사항[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">공지사항
-																	작성일</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">공지사항 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-												</div>
-											</div>
-										</article>
-									</div>
-
-								</main>
-								<main class="postcontent col-lg-3">
-									<div class="row g-4 mb-5">
-
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/n.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">공지사항[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">공지사항
-																	작성일</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">공지사항 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-												</div>
-											</div>
-										</article>
-									</div>
-
-								</main>
-								<main class="postcontent col-lg-3">
-
-									<div class="row g-4 mb-5">
-
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/n.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">공지사항[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">공지사항
-																	작성일</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">공지사항 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 공지사항 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-												</div>
-											</div>
-										</article>
-									</div>
-
-								</main>
 							</div>
 						</div>
 						<div class="tab-pane fade" id="profile-nav2" role="tabpanel"
 							aria-labelledby="canvas-profile-nav2-tab" tabindex="0">
 							<div class="row">
+
 								<main class="postcontent col-lg-3">
 									<div class="row g-4 mb-5">
 										<article class="entry event col-12 mb-0">
 											<div
 												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
 												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/e.png" alt="#"
+													<a href="/event/eventOneDetail" class="entry-image"> <img
+														src="/front/images/new/ee2.png" alt="#"
 														class="rounded-2">
 														<div class="bg-overlay">
 															<div
 																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">EVENT[번호]
+																<div class="badge bg-light text-dark rounded-pill">EVENT[1]
 																</div>
 															</div>
 														</div>
@@ -481,61 +354,17 @@
 												<div class="col-12 p-1 pt-0">
 													<div class="entry-meta no-separator mb-1 mt-0">
 														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">이벤트
-																	업로드 시각</a></li>
+															<li><a href="/event/eventOneDetail" class="text-uppercase fw-medium">2023.09.18. ~ 2023.09.20.</a></li>
 														</ul>
 													</div>
 
 													<div class="entry-title nott">
 														<h3>
-															<a href="#">이벤트 제목</a>
+															<a href="/event/eventOneDetail">우표 초성 이벤트</a>
 														</h3>
 													</div>
 													<div class="entry-content my-3">
-														<p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-
-												</div>
-											</div>
-										</article>
-									</div>
-								</main>
-
-								<main class="postcontent col-lg-3">
-									<div class="row g-4 mb-5">
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/e.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">EVENT[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">이벤트
-																	업로드 시각</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">이벤트 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+														<p class="mb-0"># 우표 ㅊㅁ 주간???</p>
 													</div>
 
 												</div>
@@ -549,13 +378,13 @@
 											<div
 												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
 												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/e.png" alt="#"
+													<a href="javascript:void(0);" class="entry-image"> <img
+														src="/front/images/3231231.png" alt="#"
 														class="rounded-2">
 														<div class="bg-overlay">
 															<div
 																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">EVENT[번호]
+																<div class="badge bg-light text-dark rounded-pill">EVENT[2]
 																</div>
 															</div>
 														</div>
@@ -564,19 +393,17 @@
 												<div class="col-12 p-1 pt-0">
 													<div class="entry-meta no-separator mb-1 mt-0">
 														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">이벤트
-																	업로드 시각</a></li>
+															<li><a href="javascript:void(0);" class="text-uppercase fw-medium">2023.09.12. ~ 2023.09.17.</a></li>
 														</ul>
 													</div>
 
 													<div class="entry-title nott">
 														<h3>
-															<a href="#">이벤트 제목</a>
+															<a href="javascript:void(0);">기대평 EVENT</a>
 														</h3>
 													</div>
 													<div class="entry-content my-3">
-														<p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+														<p class="mb-0"># 우표, 문학 그리고 행복한 이야기.</p>
 													</div>
 
 												</div>
@@ -589,13 +416,13 @@
 										<article class="entry event col-12 mb-0">
 											<div class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
 												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/e.png" alt="#"
+													<a href="javascript:void(0);" class="entry-image"> <img
+														src="/front/images/123123123.jpg" alt="#"
 														class="rounded-2">
 														<div class="bg-overlay">
 															<div
 																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">EVENT[번호]
+																<div class="badge bg-light text-dark rounded-pill">EVENT[3]
 																</div>
 															</div>
 														</div>
@@ -604,19 +431,17 @@
 												<div class="col-12 p-1 pt-0">
 													<div class="entry-meta no-separator mb-1 mt-0">
 														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">이벤트
-																	업로드 시각</a></li>
+															<li><a href="javascript:void(0);" class="text-uppercase fw-medium">2023.09.06 ~ 2023.09.10.</a></li>
 														</ul>
 													</div>
 
 													<div class="entry-title nott">
 														<h3>
-															<a href="#">이벤트 제목</a>
+															<a href="javascript:void(0);">팔로우 EVENT</a>
 														</h3>
 													</div>
 													<div class="entry-content my-3">
-														<p class="mb-0"># 이벤트 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
+														<p class="mb-0"># 이번 우표전시회의 주제는??</p>
 													</div>
 												</div>
 											</div>
@@ -670,128 +495,6 @@
 									</div>
 								</main>
 
-								<main class="postcontent col-lg-3">
-									<div class="row g-4 mb-5">
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/p.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">보도자료[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">보도자료
-																	작성일</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">보도자료 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 보도자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-
-												</div>
-											</div>
-										</article>
-									</div>
-								</main>
-								<main class="postcontent col-lg-3">
-									<div class="row g-4 mb-5">
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/p.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">보도자료[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">보도자료
-																	작성일</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">보도자료 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 보도자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-												</div>
-											</div>
-										</article>
-									</div>
-								</main>
-								<main class="postcontent col-lg-3">
-									<div class="row g-4 mb-5">
-										<article class="entry event col-12 mb-0">
-											<div
-												class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-lg h-shadow all-ts h-translate-y-sm">
-												<div class="col-12 mb-md-0">
-													<a href="#" class="entry-image"> <img
-														src="/front/images/new/finish/p.png" alt="#"
-														class="rounded-2">
-														<div class="bg-overlay">
-															<div
-																class="bg-overlay-content justify-content-start align-items-start">
-																<div class="badge bg-light text-dark rounded-pill">보도자료[번호]
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-12 p-1 pt-0">
-													<div class="entry-meta no-separator mb-1 mt-0">
-														<ul>
-															<li><a href="#" class="text-uppercase fw-medium">보도자료
-																	작성일</a></li>
-														</ul>
-													</div>
-
-													<div class="entry-title nott">
-														<h3>
-															<a href="#">보도자료 제목</a>
-														</h3>
-													</div>
-													<div class="entry-content my-3">
-														<p class="mb-0"># 보도자료 서브타이틀 및 컨텐츠가 작성됩니다.</p>
-														<p class="mb-0"># 문장의 길이가 넓이를 초과하는 경우 [...] 으로 표시 됩니다.</p>
-													</div>
-
-												</div>
-											</div>
-										</article>
-									</div>
-								</main>
 							</div>
 						</div>
 						<div class="tab-pane fade" id="about-nav2" role="tabpanel"

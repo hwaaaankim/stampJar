@@ -5,7 +5,7 @@
 
 </head>
 <body class="stretched" data-menu-breakpoint="1200">
-
+	<th:block th:replace="fragments/front/common :: transPart"></th:block>
 	<div id="wrapper">
 		<header id="header" class="transparent-header dark"
 			th:replace="fragments/front/common :: headMenu('white')"> </header>
@@ -51,19 +51,19 @@
 								class="nav canvas-alt-tabs2 canvas-tabs py-0 tabs nav-pills flex-column mb-3 border-0"
 								id="canvas-side-tab-alt" role="tablist">
 								<li class="nav-item mb-2" role="presentation">
-									<button class="nav-link active" id="canvas-home-tab-side-alt"
+									<button class="nav-link active event-btn" id="canvas-home-tab-side-alt"
 										data-bs-toggle="pill" data-bs-target="#home-side-alt"
 										type="button" role="tab" aria-controls="canvas-home-side-alt"
 										aria-selected="true">주차장 가는길</button>
 								</li>
 								<li class="nav-item mb-2" role="presentation">
-									<button class="nav-link" id="canvas-profile-tab-side-alt"
+									<button class="nav-link event-btn" id="canvas-profile-tab-side-alt"
 										data-bs-toggle="pill" data-bs-target="#profile-side-alt"
 										type="button" role="tab"
 										aria-controls="canvas-profile-side-alt" aria-selected="false">전시관 가는길</button>
 								</li>
 								<li class="nav-item mb-2" role="presentation">
-									<button class="nav-link" id="canvas-contact-tab-side-alt"
+									<button class="nav-link event-btn" id="canvas-contact-tab-side-alt"
 										data-bs-toggle="pill" data-bs-target="#contact-side-alt"
 										type="button" role="tab"
 										aria-controls="canvas-contact-side-alt" aria-selected="false">대중교통 이용시</button>
