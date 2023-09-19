@@ -1006,7 +1006,12 @@ iframe.goog-te-banner-frame { display: none !important; }
 .goog-text-highlight {background-color: transparent !important; border: none !important; box-shadow: none !important;}
 
 
-
+#about-nav2 > div > main > div > article > div > div.col-12.p-1.pt-0 > div > p{
+	
+	font-size:14px;
+	font-weight:500;
+	text-align:center;
+}
 
 
 

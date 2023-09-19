@@ -20823,7 +20823,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
   --cnvs-post-image-rounded: 3px;
   --cnvs-post-image-mb: 1.5rem;
   --cnvs-post-sm-image: 64px;
-  --cnvs-post-title-font-size: 1.75rem;
+  --cnvs-post-title-font-size: 1.5rem;
   --cnvs-post-title-font-weight: 600;
   --cnvs-post-title-font-spacing: 0;
   --cnvs-post-title-text-transform: none;
