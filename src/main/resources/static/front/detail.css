@@ -1013,7 +1013,9 @@ iframe.goog-te-banner-frame { display: none !important; }
 	text-align:center;
 }
 
-
+#about-nav2 > div > main > div > article > div{
+	min-height:300px;
+}
 
 
 
