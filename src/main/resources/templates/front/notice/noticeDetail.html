@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('공지사항')">
+
+</head>
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		<header id="header" class="transparent-header dark"
+			th:replace="fragments/front/common :: headMenu('white')"> </header>
+		<section class="page-title bg-transparent">
+			<div class="container">
+				<div class="page-title-row">
+
+					<div class="page-title-content">
+						<h1>공지사항</h1>
+					</div>
+
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/index">Home</a></li>
+							<li class="breadcrumb-item"><a href="/notice/content">공지사항</a></li>
+							<li class="breadcrumb-item active" aria-current="page">공지사항
+								상세페이지</li>
+						</ol>
+					</nav>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container" >
+
+					<div class="single-post mb-0 row justify-content-center notice-wrap">
+						<div class="entry col-lg-8 col-sm-12">
+							<div class="entry-title">
+								<h2>2023년 대한민국 우표전시회를 게시합니다.</h2>
+							</div>
+	
+							<div class="entry-meta">
+								<ul>
+									<li><i class="uil uil-schedule"></i> 2023.09.21</li>
+									<li><a href="#"><i class="uil uil-user"></i> 우편사업진흥원</a></li>
+									<li><i class="uil uil-folder-open"></i> <a href="#">#
+											일정관련</a></li>
+									<li><a href="#"><i class="uil uil-comments-alt"></i>
+											43회 조회</a></li>
+								</ul>
+							</div>
+							<div class="entry-content mt-0">
+
+								<p>2023년 대한민국 우표전시회를 시작합니다.</p>
+
+								<p>
+									약 20년에 걸쳐 우표의 아름다운 이야기를 여러분들과 공유하기 위해 우표전시회를 개최 하였습니다. 코로나 사태로 인해 온라인으로만 진행 되었던 우표전시회가 드디어 세종문화회관에서 오프라인전시회를 포함하여 시작 하였습니다.
+								</p>
+
+
+								<p>남/녀/노/소 가릴 것 없이, 친구와 연인과 가족과 함께 우표의 이야기를 살펴보며 즐거운 시간을 보내시길 바랍니다.</p>
+
+								<p>
+									SNS이벤트 및 현장 이벤트를 통해 다양한 선물을 드리고 있사오니 꼭! 다양한 이벤트 참여를 통해 즐거움과 보상 두 마리의 토끼를 모두 잡으시길 바랍니다.
+								</p>
+
+
+								<div class="tagcloud mb-5">
+									<a href="#"># 대한민국우표전시회</a> <a href="#"># 세종문화회관</a> <a
+										href="#"># 우표전설관</a> <a href="#"># 우표예술관</a> <a href="#">#
+										우표역사관</a> <a href="#"># 우표대화관</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+	</div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+</body>
+</html>

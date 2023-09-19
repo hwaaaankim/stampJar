@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('우수작 전시 페이지')">
+    
+</head>
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('white')">
+         
+        </header>
+		<section class="page-title dark bg-transparent page-title-parallax parallax border-0">
+			<img src="/front/images/new/e1.jpg" class="parallax-bg">
+			<div class="container">
+				<div class="page-title-row pt-5 pb-3">
+
+					<div class="page-title-content">
+						<span class="color fw-medium my-0">2023 Korea Philateric
+							Exhibition</span>
+						<h1>
+							<div class="fw-bold display-5 nocolor">대한민국 우표전시회 이벤트 소식</div>
+						</h1>
+
+						<div class="mt-4 pt-3">
+							<a href="/event/prize"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">부대행사 안내 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+							<a href="/event/eventTwo"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">투표 이벤트<i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+						</div>
+					</div>
+
+					<nav aria-label="breadcrumb" class="d-none d-lg-block">
+						<ol class="breadcrumb"
+							style="-bs-breadcrumb-divider: '&amp;#62;';">
+							<li class="breadcrumb-item"><a href="/index"><i
+									class="uil uil-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#">이벤트</a></li>
+							<li class="breadcrumb-item active" aria-current="page">이벤트 안내</li>
+						</ol>
+					</nav>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+
+			<div class="content-wrap bg-light">
+
+				<div class="container">
+
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-10">
+							<div class="card my-5 shadow-sm">
+								<div class="card-body p-5">
+
+									<h4 class="ls-4 text-center">SNS 이벤트 신청하기</h4>
+
+									<div class="divider divider-sm divider-center text-dark"><i class="bi-heart"></i></div>
+
+									<div class="form-widget" >
+										<form class="mb-0" name="template-wedding" action="#" method="post" enctype="multipart/form-data">
+
+											<div class="row g-4">
+
+												<div class="col-12 text-center mb-5">
+													<h6 class="font-body text-uppercase ls-3">2023.09.18. ~ 2023.09.20.</h6>
+													<h2 class="font-secondary fst-italic h1">우표 초성 이벤트</h2>
+												</div>
+
+												<div class="col-12">
+													<div class="row g-4">
+														<div class="col-md-12">
+															<label for="template-wedding-first-name">성함 : <small class="text-danger">*</small></label>
+															<input type="text" id="template-wedding-first-name" name="name" value="" class="form-control" placeholder="성함을 입력 해 주세요.">
+														</div>
+														<div class="col-md-12">
+															<label for="template-wedding-last-name">연락처 : <small class="text-danger">*</small></label>
+															<input type="text" id="template-wedding-last-name" name="phone" value="" class="form-control" placeholder="연락처를 입력 해 주세요.">
+														</div>
+														<div class="col-md-12">
+															<label for="template-wedding-last-name">인스타그램ID : <small class="text-danger">*</small></label>
+															<input type="text" id="template-wedding-last-name" name="instagrmId" value="" class="form-control" placeholder="인스타그램 ID를 입력 해 주세요.">
+														</div>
+														<div class="col-md-12">
+															<label for="template-wedding-last-name">이벤트 답변 : <small class="text-danger">*</small></label>
+															<input type="text" id="template-wedding-last-name" name="answer" value="" class="form-control" placeholder="이벤트의 답변을 입력 해 주세요.">
+														</div>
+													</div>
+												</div>
+
+												<div class="col-12">
+													<input type="checkbox" id="privacy" /><span><a href="/private" style="color:black;text-decoration:underline;font-size:14px;">이벤트 경품 발송을 위한 개인정보 처리방침에 동의합니다.</a></span>
+												</div>
+												<div class="col-12">
+													<button type="submit" class="btn btn-primary w-100 btn-lg event-btn">신청하기</button>
+												</div>
+											</div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+
+	</div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="/front/js/components/datepicker.js"></script>
+
+</body>
+</html>

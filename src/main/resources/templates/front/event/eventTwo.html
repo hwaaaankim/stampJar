@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('우수작 전시 페이지')">
+    
+</head>
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		 <header id="header" class="transparent-header dark" th:replace="fragments/front/common :: headMenu('white')">
+         
+        </header>
+		<section class="page-title dark bg-transparent page-title-parallax parallax border-0">
+			<img src="/front/images/new/e1.jpg" class="parallax-bg">
+			<div class="container">
+				<div class="page-title-row pt-5 pb-3">
+
+					<div class="page-title-content">
+						<span class="color fw-medium my-0">2023 Korea Philateric
+							Exhibition</span>
+						<h1>
+							<div class="fw-bold display-5 nocolor">대한민국 우표전시회 투표이벤트</div>
+						</h1>
+
+						<div class="mt-4 pt-3">
+							<a href="/event/prize"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">부대행사 안내 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+							<a href="/event/comment"
+								class="button rounded-2 button-dark button-border border-2 me-0 mb-0">만족도 조사하기 <i class="bi-arrow-up-right ms-1 me-0 small"></i>
+							</a>
+						</div>
+					</div>
+
+					<nav aria-label="breadcrumb" class="d-none d-lg-block">
+						<ol class="breadcrumb"
+							style="-bs-breadcrumb-divider: '&amp;#62;';">
+							<li class="breadcrumb-item"><a href="/index"><i
+									class="uil uil-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#">이벤트</a></li>
+							<li class="breadcrumb-item active" aria-current="page">이벤트 안내</li>
+						</ol>
+					</nav>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="form-widget">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<form id="car-rental" class="row" action="#" method="post" enctype="multipart/form-data">
+									<div class="col-12">
+										<div class="border-top-0 m-0">
+											<div class="container text-center">
+												<div class="heading-block text-center">
+													<h2>당신의 미래 우표에 투표해 주세요.</h2>
+													<span>실제로 만나보고 싶은 AI우표를 골라 주세요.</span>
+												</div>
+											</div>
+										</div>
+										<div class="row car-list btn-group">
+											<label class="car-image pe-0 col-6 col-md-3">
+												<div class="stamp-wrap">
+													<input type="radio" name="stamp" class="required" value="kim"> 우표01
+													<img src="/front/images/event/1.gif" alt="Image">
+												</div>
+											</label>
+
+											<label class="car-image px-0 col-6 col-md-3">
+												<div class="stamp-wrap">
+													<input type="radio" name="stamp" class="required" value="Honda"> 우표02
+													<img src="/front/images/event/3.gif" alt="Image">
+												</div>
+											</label>
+
+											<label class="car-image px-0 col-6 col-md-3">
+												<div class="stamp-wrap">
+													<input type="radio" name="stamp" class="required" value="Fortuner"> 우표03
+												<img src="/front/images/event/4.gif" alt="Image">
+												</div>
+											</label>
+
+											<label class="car-image px-0 col-6 col-md-3">
+												<div class="stamp-wrap">
+													<input type="radio" name="stamp" class="required" value="i20"> 우표04
+												<img src="/front/images/event/2.gif" alt="Image">
+												</div>
+											</label>
+										</div>
+									</div>
+									<div class="col-12 mt-5">
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<label for="car-rental-pickup-date">성함 : </label>
+												<input type="text" name="name" class="form-control" value="" placeholder="성함을 입력 해 주세요.">
+											</div>
+											<div class="col-md-12 form-group">
+												<label for="car-rental-dropoff-date">연락처 : </label>
+												<input type="text" name="phone" class="form-control" value="" placeholder="연락처를 입력 해 주세요.">
+											</div>
+											<div class="col-md-12 form-group">
+												<label for="car-rental-dropoff-date">배송지 : </label>
+												<input type="text" name="address" class="form-control" value="" placeholder="경품 발송을 위한 주소를 입력 해 주세요.">
+											</div>
+										</div>
+									</div>
+									<div class="col-12 text-center">
+										<input type="checkbox" id="privacy" /><span><a href="/private" style="color:black;text-decoration:underline;font-size:14px;">이벤트 경품 발송을 위한 개인정보 처리방침에 동의합니다.</a></span>
+									</div>
+									<div class="col-12 text-center mt-3">
+										<button type="submit" name="car-rental-submit" style="width:30%;" class="event-btn btn btn-primary">투표하기</button>
+									</div>
+
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+
+	</div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="/front/js/components/datepicker.js"></script>
+
+</body>
+</html>

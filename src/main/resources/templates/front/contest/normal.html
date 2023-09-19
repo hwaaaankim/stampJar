@@ -126,6 +126,9 @@
 								</div>
 							</div>
 						</article>
+						<article class="portfolio-item col-12 text-center" th:if="${exhibitions.totalElements == 0}">
+							<p>- 검색 결과가 존재하지 않습니다. 정확하게 검색 해 주세요. -</p>
+						</article>
 					</div>
 					<div class="pagination-wrap">
 						<ul class="pagination pagination-rounded pagination-3d">

@@ -26,10 +26,10 @@ public class EventController {
 		return "front/event/eventTwo";
 	}
 	
-	@RequestMapping("/eventThree")
+	@RequestMapping("/eventOneDetail")
 	public String eventThree() {
 		
-		return "front/event/eventThree";
+		return "front/event/eventOneDetail";
 	}
 	
 	@RequestMapping("/prize")

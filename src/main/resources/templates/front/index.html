@@ -11,9 +11,9 @@
 		<header id="header" class="transparent-header"
 			th:replace="fragments/front/common :: headMenu('index')"> </header>
 		<section id="slider" class="slider-element slider-parallax min-vh-60 min-vh-md-100 include-header">
-			<div class="slider-inner">
-				<div data-vbg-autoplay="true" data-vbg="https://youtu.be/TbEyqaaybSw"></div>
-				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.5);">
+			<div class="slider-inner" id="main-mobile">
+				<div id="pc-video" data-vbg-autoplay="true" data-vbg="https://youtu.be/TbEyqaaybSw"></div>
+				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.3);">
 					<div class="container mt-5 mb-6">
 						<div
 							class="row align-items-center justify-content-center col-mb-80">
@@ -23,21 +23,17 @@
 									display: none
 								}
 								</style>
-								<h3 class="fw-semibold mb-0" style="color: white;">2023.09.21.(목)
-									~ 09.28.(목) 세종문화회관 미술관 2관</h3>
-								<h1 class="fw-semibold lh-sm display-4 mb-3"
+								
+								<h1 class="fw-semibold lh-sm display-4 mb-0 mt-5"
 									style="letter-spacing: -1px; color: white;">
 									<span class="text-rotater-section nocolor" data-separator="|"
 										data-rotate="fadeIn" data-speed="2500"><span
 										class="t-rotate c-white">즐거움이 가득한|함께 즐기는|콘텐츠가 풍성한</span></span> 우표전시회
 								</h1>
+								<h3 class="fw-semibold mt-0" style="color: white;">2023.09.21.(목)
+									~ 09.28.(목) 세종문화회관 미술관 2관</h3>
 							</div>
 							<div class="col-lg-8 text-center pb-3 mt-10 m-mt-10">
-								<p class="lead fs-5 mb-5 m-mb-6">
-									2023 대한민국 우표전시회에서는 '이야기를 주제로 <span
-										class="counter counter-inherit color fw-semibold">우표의
-										가치</span> 를 전달하고자 합니다.<br> 찾아와 주셔서 진심으로 감사드립니다.
-								</p>
 								<div
 									class="row justify-content-center gutter-20 mx-auto main-btn-wrap"
 									style="max-width: 600px;">
@@ -244,7 +240,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-wrap">
+			<div class="container-wrap m-d-none">
 				<div class="container" style="padding-top: 80px;">
 					<div class="title-block">
 						<h1>새로운 소식</h1>
@@ -972,22 +968,20 @@
 				</div>
 			</div>
 			<div class="container-wrap">
-				<div class="container" style="padding-top: 80px;">
-					<div class="container">
-						<ul class="clients-grid row row-cols-2 row-cols-sm-5">
-							<li class="col"><a target="_blank" href="https://www.koreapost.go.kr/"><img
-									src="/front/images/new/logo/11.png" alt="Clients"></a></li>
-							
-							<li class="col"><a target="_blank" href="https://www.posa.or.kr/portal/main/main.do"><img
-									src="/front/images/new/logo/33.png" alt="Clients"></a></li>
-							<li class="col"><a target="_blank" href="http://www.woopyo.net/default/"><img
-									src="/front/images/new/looo.png" alt="Clients"></a></li>
-							<li class="col"><a target="_blank" href="https://stamp.epost.go.kr/"><img
-									src="/front/images/new/logo/55.png" alt="Clients"></a></li>
-							<li class="col"><a target="_blank" href="https://www.stampmuseum.kr"><img
-									src="/front/images/new/logo/22.png" alt="Clients"></a></li>		
-						</ul>
-					</div>
+				<div class="container partners">
+					<ul class="clients-grid row row-cols-2 row-cols-sm-5">
+						<li class="col"><a target="_blank" href="https://www.koreapost.go.kr/"><img
+								src="/front/images/new/logo/11.png" alt="Clients"></a></li>
+						
+						<li class="col"><a target="_blank" href="https://www.posa.or.kr/portal/main/main.do"><img
+								src="/front/images/new/logo/33.png" alt="Clients"></a></li>
+						<li class="col"><a target="_blank" href="http://www.woopyo.net/default/"><img
+								src="/front/images/new/looo.png" alt="Clients"></a></li>
+						<li class="col"><a target="_blank" href="https://stamp.epost.go.kr/"><img
+								src="/front/images/new/logo/55.png" alt="Clients"></a></li>
+						<li class="col"><a target="_blank" href="https://www.stampmuseum.kr"><img
+								src="/front/images/new/logo/22.png" alt="Clients"></a></li>		
+					</ul>
 				</div>
 			</div>
 		</section>

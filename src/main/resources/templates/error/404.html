@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('404에러')">
+
+</head>
+
+<body class="stretched">
+
+	<div id="wrapper">
+		<header id="header" class="transparent-header"
+			th:replace="fragments/front/common :: headMenu('index')"> </header>
+		<section id="slider" class="slider-element slider-parallax min-vh-60 min-vh-md-100 include-header">
+			<div class="slider-inner" style="height:100vh;" id="main-mobile">
+				<div id="pc-video" data-vbg-autoplay="true" data-vbg="https://youtu.be/TbEyqaaybSw"></div>
+				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.3);">
+					<div class="container mt-5 mb-6">
+						<div
+							class="row align-items-center justify-content-center col-mb-80">
+							<div class="col-12 text-center pb-0 main-text-area">
+								<style>
+								.has-plugin-textrotator .textrotator-placeholder {
+									display: none
+								}
+								</style>
+								
+								<h1 class="fw-semibold lh-sm display-4 mb-0 mt-5"
+									style="letter-spacing: -1px; color: white;">
+									<span class="text-rotater-section nocolor" data-separator="|"
+										data-rotate="fadeIn" data-speed="2500"><span
+										class="t-rotate c-white">존재하지 않는 페이지 입니다.</span></span> 
+								</h1>
+							</div>
+							<div class="col-lg-8 text-center pb-3 mt-10 m-mt-10">
+								<div
+									class="row justify-content-center gutter-20 mx-auto main-btn-wrap"
+									style="max-width: 600px;">
+									<div class="col-sm-6 col-xl-6">
+										<a href="/intro/opening"
+											class="button button-large button-shadow button-shadow-contrast border-contrast-900 bg-opacity-50 border border-width-2 text-contrast-900 h-text-light rounded m-0 w-100"
+											data-offset="100" data-easing="easeInOutExpo"
+											data-speed="1250" style="padding: 0.75rem 2rem;"><i
+											class="uil uil-images"
+											style="position: relative; top: 1px; margin-right: 5px;"></i>
+											행사안내</a>
+									</div>
+									<div class="col-sm-6 col-xl-6">
+										<a href="/front/download.pdf" download 
+											class="button button-large button-shadow button-shadow-contrast border-contrast-900 bg-opacity-50 border border-width-2 text-contrast-900 h-text-light rounded m-0 w-100"
+											data-offset="100" data-easing="easeInOutExpo"
+											data-speed="1250" style="padding: 0.75rem 2rem;"><i
+											class="uil uil-images"
+											style="position: relative; top: 1px; margin-right: 5px;"></i>
+											브로슈어 다운로드</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 text-center">
+								<span class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 대한민국우표전시회</span> <span
+									class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 세종문화회관</span> <span
+									class="d-inline-block mb-3 me-3 small"><i
+									class="fa-star fa-solid me-1 position-relative text-warning"></i>#
+									우표이야기</span> <span class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 우표전설관</span> <span
+									class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 우표예술관</span> <span
+									class="d-inline-block mb-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 우표대화관</span> <span
+									class="d-inline-block mb-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 우표역사관</span>
+							</div>
+						</div>
+					</div>
+					<div class="clear mb-4"></div>
+
+				</div>
+			</div>
+		</section>
+
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+	</div>
+
+
+	<script src="/front/js/jquery.js"></script>
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script src="/front/page/index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
+	<script>
+	  $(document).ready(function() {
+	    $('[data-vbg]').youtube_background({
+	    	'fit-box':true
+	    }); 
+	  });
+	</script>
+</body>
+</html>

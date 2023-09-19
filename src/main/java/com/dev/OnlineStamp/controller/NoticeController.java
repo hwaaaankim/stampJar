@@ -24,4 +24,10 @@ public class NoticeController {
 		
 		return "front/notice/press";
 	}
+	
+	@RequestMapping("/noticeDetail")
+	public String noticeDetail() {
+		
+		return "front/notice/noticeDetail";
+	}
 }

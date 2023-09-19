@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="headSrc(title)">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="author" content="#">
+<meta name="description" content="#">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="/front/images/new/favicon.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/e5334cc6a1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/css/swiper.min.css" />
+<link rel="stylesheet" href="https://use.typekit.net/hok5sht.css">
+<link rel="stylesheet" href="/front/style.css">
+<link rel="stylesheet" href="/front/css/font-icons.css">
+<link rel="stylesheet" href="/front/css/swiper.css">
+<link rel="stylesheet" href="/front/css/custom.css">
+<link rel="stylesheet" href="/front/detail.css">
+<link rel="stylesheet" href="/front/svg.css">
+<link rel="stylesheet" href="/front/css/components/datepicker.css">
+
+<link rel="stylesheet" href="/front/include/rs-plugin/css/settings.css" media="screen">
+<link rel="stylesheet" href="/front/include/rs-plugin/css/layers.css">
+<link rel="stylesheet" href="/front/include/rs-plugin/css/navigation.css">
+<link rel="stylesheet" href="/front/rs.css">
+<title th:text="${title}">온라인전시회</title>
+
+</head>
+
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div id="wrapper">
+		<header id="header" class="transparent-header" th:fragment="headMenu(code)" th:classappend="${code != 'white'} ? 'dark' : ''"
+			th:attr="data-responsive-class=${code != 'index' ? 'not-dark' : ''} , data-sticky-class=${code != 'index' ? 'not-dark' : ''}">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<div id="logo" class="me-5">
+							<a href="/index"> <img class="logo-default"
+								src="/front/images/new/logo-default.png" alt="Logo"> <img
+								class="logo-dark" src="/front/images/new/logo-new.png"
+								alt="Logo">
+							</a>
+						</div>
+
+						<div class="header-misc ms-auto ms-xl-0">
+							<a href="/contest/excellent"
+								class="button button-border border-contrast-900 text-contrast-900 h-text-light button-shadow button-shadow-contrast rounded-1 px-3 px-lg-4 me-3 me-xl-0"><i
+								class="bi-image d-block d-md-none me-1"></i><span
+								class="d-none d-md-block">전시회 구경하기</span></a>
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button"
+								title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span
+									class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<nav class="primary-menu">
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="/index">
+										<div>홈</div>
+								</a></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>행사안내</div>
+								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>관람안내</div>
+								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>우표작품전시</div>
+								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>이벤트</div>
+								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
+								<li class="menu-item mega-menu"><a class="menu-link"
+									href="#">
+										<div>알립니다</div>
+								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
+								<li class="menu-item ms-auto"><a class="menu-link" href="#">
+										<div>
+											HELP<i
+												class="bi-caret-down-fill text-smaller d-none d-xl-inline-block me-0"></i>
+										</div>
+								</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#">
+												<div>
+													<i class="bi-arrow-repeat"></i>언어 지원
+												</div>
+										</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="">
+														<div>
+															<i class="bi-translate"></i>ENGLISH
+														</div>
+												</a></li>
+												<li class="menu-item"><a class="menu-link" href="">
+														<div>
+															<i class="bi-translate"></i>JAPANESE
+														</div>
+												</a></li>
+												<li class="menu-item"><a class="menu-link" href="">
+														<div>
+															<i class="bi-translate"></i>CHINESE
+														</div>
+												</a></li>
+											</ul></li>
+										<li class="menu-item"><a class="menu-link" href="/private">
+												<div>
+													<i class="bi-file-earmark-text"></i>개인정보 처리방침
+												</div>
+										</a></li>
+										<li class="menu-item">
+											<a class="menu-link" href="/policy">
+												<div>
+													<i class="bi-file-earmark-text"></i>이용 약관
+												</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header>
+
+		<th:block th:fragment="footerSrc">
+			<footer id="footer" class="dark">
+
+				<div id="copyrights">
+					<div class="container">
+						<div class="row col-mb-30">
+							<div class="col-md-7 col-12 text-center text-md-start">
+
+								<div class="copyright-links">
+									<a href="#">주최 : 우정사업본부</a> / <a href="#">주관 : 한국우취연합, 한국우편사업진흥원</a> / <a href="#">(07245) 서울특별시 영등포구 영중로 83(영등포동 7가)</a>
+									/ <a href="#">TEL : 02-2036-0821</a> / <a href="#">FAX : 02-2036-0869</a> / <a href="#">개인정보보호정책</a>
+									/ <a href="#">이메일무단수집거부</a>
+								</div>
+								Copyrights by Korea Philatelic Exhibition 2023. All Rights Reserved
+							</div>
+
+							<div class="col-md-5 col-12 text-center text-md-end">
+								<i class="fa-solid fa-phone"></i> 02-2036-0821 <span
+									class="middot">&middot;</span> <i class="bi-skype"></i> 한국우편사업진흥원
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</th:block>
+	</div>
+	<th:block th:fragment="headDetail">
+		<div class="mega-menu-content mega-menu-style-2 border-0 rounded">
+			<div class="container">
+				<div class="row">
+					<ul class="sub-menu-container mega-menu-column col border-start-0">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>[전시회안내]</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/intro/opening">
+										<div>
+											 오프닝 세션
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/intro/introduction">
+										<div>
+											 전시회 소개
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>[관람안내]</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/information/process">
+										<div>
+											 관람안내
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/information/contact">
+										<div>
+											 찾아오시는 길
+										</div>
+								</a></li>
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>[우표작품전시]</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/contest/excellent">
+										<div>
+											 우수작 전시
+										</div>
+								</a>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="/contest/normal">
+										<div>
+											 일반수상작 전시
+										</div>
+								</a>
+								</li>
+
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>[이벤트]</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/event/eventOne">
+										<div>
+											 SNS 이벤트
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/event/prize">
+										<div>
+											 부대행사
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/event/comment">
+										<div>
+											 만족도 조사
+										</div>
+								</a></li>
+							</ul></li>
+					</ul>
+					<ul class="sub-menu-container mega-menu-column col">
+						<li class="menu-item mega-menu-title"><a class="menu-link"
+							href="#">
+								<div>[알립니다]</div>
+						</a>
+							<ul class="sub-menu-container">
+								<li class="menu-item"><a class="menu-link" href="/notice/content">
+										<div>
+											 공지시항
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/notice/press">
+										<div>
+											 보도자료
+										</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/notice/gallery">
+										<div>
+											 사진영상
+										</div>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</th:block>
+
+	<th:block th:fragment="scriptSrc">
+		<div id="gotoTop" class="uil uil-angle-up"></div>
+		<script src="/front/js/functions.js"></script>
+	</th:block>
+
+
+</body>
+
+</html>

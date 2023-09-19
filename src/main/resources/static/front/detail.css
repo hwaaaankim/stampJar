@@ -767,6 +767,16 @@ span.port-content > a{
 	
 	height:350px !important;
 }
+.policy p{
+	margin-bottom:5px;
+}
+.notice-wrap .entry{
+	padding:30px;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	box-shadow:0px 3px 5px rgba(0,0,0,0.3);
+}
+
 @media(max-width:600px){
 	.main-text-area h3{
 		font-size:13px;
@@ -917,11 +927,69 @@ span.port-content > a{
 	.header-row{
 		justify-content:space-between;
 	}
+	#pc-video{
+		display:none;
+	}
+	#main-mobile{
+		background-image: url('/front/images/bg_m.jpg'); 
+		background-size: cover; 
+		background-position: center center;
+	}
+	.m-d-none{
+		display:none;
+	}
+	.content-wrap{
+		padding-top:0px;
+	}
+	.event-btn{
+		height:47px;
+	}
 }	
 
+.file-caption.icon-visible .file-caption-name {
+	font-family: 'Lato', sans-serif;
+	color: #666;
+}
+.form-process {
+	position: absolute;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	background-image: none;
+}
 
+.form-process > div { background-color: #999;  }
 
+.form-process,
+#template-wedding-submitted,
+.template-wedding-complete .form-process {
+	display: none;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.7);
+}
 
+.template-wedding-processing .form-process {
+	display: block;
+	opacity: 1;
+}
+
+.divider.divider-center.divider-sm:before,
+.divider.divider-center.divider-sm:after { border-color: #CCC; }
+
+.btn-group label.error {
+	display: block !important;
+	text-transform: none;
+	position: absolute;
+    bottom: -34px;
+    left: 0;
+    margin-bottom: 10px;
+}
+
+.btn-group input.valid ~ label.error,
+.btn-group input[type="text"] ~ label.error,
+.btn-group input[type="email"] ~ label.error,
+.btn-group input[type="number"] ~ label.error,
+.btn-group select ~ label.error { display: none !important; }
 
 
 

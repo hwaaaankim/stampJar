@@ -17,6 +17,16 @@ public class IndexController {
 	@Autowired
 	ExhibitionRepository exhibitionRepository;
 	
+	@RequestMapping("/private")
+	public String privatePage() {
+		return "front/private";
+	}
+	
+	@RequestMapping("/policy")
+	public String policy() {
+		return "front/policy";
+	}
+	
 	@RequestMapping({"/index","/"})
 	public String index(Model model) {
 		

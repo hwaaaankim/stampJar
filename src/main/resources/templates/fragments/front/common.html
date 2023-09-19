@@ -64,31 +64,88 @@
 							</button>
 						</div>
 
-						<nav class="primary-menu flex-xl-fill me-auto">
+						<nav class="primary-menu">
 							<ul class="menu-container">
-								<li class="menu-item"><a class="menu-link" href="#">
-										<div>홈</div>
-								</a></li>
-								<li class="menu-item mega-menu"><a class="menu-link"
-									href="#">
+								<li class="menu-item">
+									<a class="menu-link" href="/index">
+											<div>홈</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
 										<div>행사안내</div>
-								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
-								<li class="menu-item mega-menu"><a class="menu-link"
-									href="#">
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="/intro/opening"><div>오프닝 세션</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/intro/introduction"><div>전시회 소개</div></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
 										<div>관람안내</div>
-								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
-								<li class="menu-item mega-menu"><a class="menu-link"
-									href="#">
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="/information/process"><div>관람안내</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/information/contact"><div>찾아오시는 길</div></a>
+										</li>
+									</ul> 
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
 										<div>우표작품전시</div>
-								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
-								<li class="menu-item mega-menu"><a class="menu-link"
-									href="#">
+									</a> 
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="/contest/excellent"><div>우수작 전시</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/contest/normal"><div>일반출품작 전시</div></a>
+										</li>
+									</ul> 
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
 										<div>이벤트</div>
-								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
-								<li class="menu-item mega-menu"><a class="menu-link"
-									href="#">
+									</a> 
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="/event/eventOne"><div>SNS 이벤트</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/event/eventTwo"><div>투표 이벤트</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/event/prize"><div>부대행사</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="javascript:alert('준비 중 입니다^^');"><div> 만족도 조사</div></a>
+										</li>
+									</ul>
+								</li>
+								
+								<li class="menu-item">
+									<a class="menu-link" href="#">
 										<div>알립니다</div>
-								</a> <th:block th:replace="fragments/front/common :: headDetail"></li>
+									</a> 
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="/notice/content"><div>공지사항</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/notice/press"><div>보도자료</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="/notice/gallery"><div>사진영상</div></a>
+										</li>
+									</ul>
+								</li>
 								<li class="menu-item ms-auto"><a class="menu-link" href="#">
 										<div>
 											HELP<i
@@ -168,120 +225,6 @@
 			</footer>
 		</th:block>
 	</div>
-	<th:block th:fragment="headDetail">
-		<div class="mega-menu-content mega-menu-style-2 border-0 rounded">
-			<div class="container">
-				<div class="row">
-					<ul class="sub-menu-container mega-menu-column col border-start-0">
-						<li class="menu-item mega-menu-title"><a class="menu-link"
-							href="#">
-								<div>[전시회안내]</div>
-						</a>
-							<ul class="sub-menu-container">
-								<li class="menu-item"><a class="menu-link" href="/intro/opening">
-										<div>
-											 오프닝 세션
-										</div>
-								</a></li>
-								<li class="menu-item"><a class="menu-link" href="/intro/introduction">
-										<div>
-											 전시회 소개
-										</div>
-									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="sub-menu-container mega-menu-column col">
-						<li class="menu-item mega-menu-title"><a class="menu-link"
-							href="#">
-								<div>[관람안내]</div>
-						</a>
-							<ul class="sub-menu-container">
-								<li class="menu-item"><a class="menu-link" href="/information/process">
-										<div>
-											 관람안내
-										</div>
-								</a></li>
-								<li class="menu-item"><a class="menu-link" href="/information/contact">
-										<div>
-											 찾아오시는 길
-										</div>
-								</a></li>
-							</ul></li>
-					</ul>
-					<ul class="sub-menu-container mega-menu-column col">
-						<li class="menu-item mega-menu-title"><a class="menu-link"
-							href="#">
-								<div>[우표작품전시]</div>
-						</a>
-							<ul class="sub-menu-container">
-								<li class="menu-item"><a class="menu-link" href="/contest/excellent">
-										<div>
-											 우수작 전시
-										</div>
-								</a>
-								</li>
-								<li class="menu-item"><a class="menu-link" href="/contest/normal">
-										<div>
-											 일반수상작 전시
-										</div>
-								</a>
-								</li>
-
-							</ul></li>
-					</ul>
-					<ul class="sub-menu-container mega-menu-column col">
-						<li class="menu-item mega-menu-title"><a class="menu-link"
-							href="#">
-								<div>[이벤트]</div>
-						</a>
-							<ul class="sub-menu-container">
-								<li class="menu-item"><a class="menu-link" href="/event/eventOne">
-										<div>
-											 SNS 이벤트
-										</div>
-								</a></li>
-								<li class="menu-item"><a class="menu-link" href="/event/prize">
-										<div>
-											 부대행사
-										</div>
-								</a></li>
-								<li class="menu-item"><a class="menu-link" href="/event/comment">
-										<div>
-											 만족도 조사
-										</div>
-								</a></li>
-							</ul></li>
-					</ul>
-					<ul class="sub-menu-container mega-menu-column col">
-						<li class="menu-item mega-menu-title"><a class="menu-link"
-							href="#">
-								<div>[알립니다]</div>
-						</a>
-							<ul class="sub-menu-container">
-								<li class="menu-item"><a class="menu-link" href="/notice/content">
-										<div>
-											 공지시항
-										</div>
-								</a></li>
-								<li class="menu-item"><a class="menu-link" href="/notice/press">
-										<div>
-											 보도자료
-										</div>
-								</a></li>
-								<li class="menu-item"><a class="menu-link" href="/notice/gallery">
-										<div>
-											 사진영상
-										</div>
-								</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</th:block>
 
 	<th:block th:fragment="scriptSrc">
 		<div id="gotoTop" class="uil uil-angle-up"></div>
