@@ -24,7 +24,7 @@ server:
 spring:
   config:
     activate: 
-      on-profile: prod
+      on-profile: test
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     password: ghksrka3849!

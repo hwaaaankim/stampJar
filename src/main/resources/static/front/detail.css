@@ -1021,8 +1021,49 @@ iframe.goog-te-banner-frame { display: none !important; }
 	overflow:hidden;
 	box-shadow:0px 3px 3px rgba(0,0,0,0.3);
 }
+.stamp-wrap{
+	text-align:center;
+	justify-content:space-between;
+}
+.stamp-wrap img{
+	height:100%;
+}
 
+.form-group > label.error {
+	display: block !important;
+	text-transform: none;
+}
 
+.form-group input.valid ~ label.error,
+.form-group input[type="text"] ~ label.error,
+.form-group input[type="email"] ~ label.error,
+.form-group input[type="number"] ~ label.error,
+.form-group select ~ label.error { display: none !important; }
+
+.car-list .car-image [type=radio] { margin-right: 4px; }
+
+.car-list .car-image div {
+	background-color: var(--cnvs-contrast-100);
+	padding: 12px;
+	margin-left: 8px;
+}
+
+.car-list .car-image img {
+	display: block;
+	margin-top: 10px;
+	box-shadow:0px 5px 5px rgba(0,0,0,0.3);
+}
+.ai-form-wrap{
+	padding:30px;
+	background-color:rgba(255,255,255,0.9);
+}
+.ai-form-wrap .car-list .car-image div {
+	background-color:transparent;
+}
+#car-rental > div > div > img{
+	box-shadow:0px 5px 5px rgba(0,0,0,0.3);
+	padding:0px;
+}
 
 
 

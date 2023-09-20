@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('AI PROMPT')">
+
+</head>
+
+<body class="stretched">
+	<div id="wrapper">
+		<section id="slider" class="slider-element slider-parallax min-vh-100 min-vh-md-100 include-header">
+			<div class="slider-inner" id="main-mobile">
+				<div id="pc-video" data-vbg-autoplay="true" data-vbg="https://youtu.be/TbEyqaaybSw"></div>
+				<div class="vertical-middle slider-element-fade" style="background-color:rgba(0,0,0,0.2);">
+					<div class="container mt-5 mb-6">
+						<div
+							class="row align-items-center justify-content-center col-mb-80">
+							<div class="col-12 text-center pb-0 main-text-area">
+								<style>
+								.has-plugin-textrotator .textrotator-placeholder {
+									display: none
+								}
+								</style>
+								
+								<h1 class="fw-semibold lh-sm display-4 mb-0 mt-5"
+									style="letter-spacing: -1px; color: white;">
+									우표를 통해 쉽게 배우는 AI PROMPT
+								</h1>
+								<h3 class="fw-semibold mt-0" style="color: white;">- 컴퓨터와 대화하는 방법 -</h3>
+							</div>
+							<div class="col-lg-8 text-center pb-3 mt-10 m-mt-10">
+								<div
+									class="row justify-content-center gutter-20 mx-auto main-btn-wrap"
+									style="max-width: 600px;">
+									<div class="col-sm-12 col-xl-12">
+										<a href="/ai/start" 
+											class="button button-large button-shadow button-shadow-contrast border-contrast-900 bg-opacity-50 border border-width-2 text-contrast-900 h-text-light rounded m-0 w-100"
+											data-offset="100" data-easing="easeInOutExpo"
+											data-speed="1250" style="padding: 0.75rem 2rem;"><i
+											class="uil uil-images"
+											style="position: relative; top: 1px; margin-right: 5px;"></i>
+											시작하기</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 text-center">
+								<span class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 대한민국우표전시회</span> <span
+									class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # AI</span> <span
+									class="d-inline-block mb-3 me-3 small"><i
+									class="fa-star fa-solid me-1 position-relative text-warning"></i>#
+									PROMPT</span> <span class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # COMPUTER SCIENCE</span> <span
+									class="d-inline-block mb-3 me-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 컴퓨터와대화하기</span> <span
+									class="d-inline-block mb-3 small"><i
+									class="fa-check fa-solid me-1 position-relative text-success"
+									style="top: 1px"></i> # 우표대화관</span> 
+							</div>
+						</div>
+					</div>
+					<div class="clear mb-4"></div>
+
+				</div>
+			</div>
+		</section>
+
+		<th:block th:replace="fragments/front/common :: footerSrc"></th:block>
+	</div>
+
+
+	<script src="/front/js/jquery.js"></script>
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+	<script
+		src="/front/include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script
+		src="/front/include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+	<script>
+		var tpj=jQuery;
+		var revapi8;
+
+		tpj(document).ready(function() {
+			if(tpj("#rev_slider_8_1").revolution == undefined){
+				revslider_showDoubleJqueryError("#rev_slider_8_1");
+			}else{
+				revapi8 = tpj("#rev_slider_8_1").show().revolution({
+					sliderType:"standard",
+					jsFileLocation:"/front/include/rs-plugin/js/",
+					sliderLayout:"fullscreen",
+					dottedOverlay:"none",
+					delay:5000,
+					navigation: {
+						onHoverStop:"off",
+					},
+					responsiveLevels:[1240,1024,778,480],
+					visibilityLevels:[1240,1024,778,480],
+					gridwidth:[1400,1200,778,480],
+					gridheight:[900,800,960,720],
+					lazyType:"smart",
+					parallax: {
+						type:"scroll",
+						origo:"enterpoint",
+						speed:400,
+						levels:[5,10,15,20,25,30,35,40,50,-10,-15,-20,-25,-30,-40,55],
+						type:"scroll",
+					},
+					shadow:0,
+					spinner:"off",
+					stopLoop:"on",
+					stopAfterLoops:0,
+					stopAtSlide:1,
+					shuffle:"off",
+					autoHeight:"off",
+					fullScreenAutoWidth:"off",
+					fullScreenAlignForce:"off",
+					fullScreenOffsetContainer: "",
+					fullScreenOffset: "60px",
+					disableProgressBar:"on",
+					hideThumbsOnMobile:"off",
+					hideSliderAtLimit:0,
+					hideCaptionAtLimit:0,
+					hideAllCaptionAtLilmit:0,
+					debugMode:false,
+					fallbacks: {
+						simplifyAll:"off",
+						nextSlideOnWindowFocus:"off",
+						disableFocusListener:false,
+					}
+				});
+				var api = revapi8;
+
+				var newCall = new Object(),
+					cslide;
+
+				newCall.callback = function() {
+					var proc = api.revgetparallaxproc(),
+						fade = 1+(proc*1.7);
+						fade2 = 1.3+(proc*2);
+
+					fade = fade>1 ? 1 : fade < 0 ? 0 : fade;
+					fade2 = fade2>1 ? 1 : fade2 < 0.15 ? 0.15 : fade2;
+
+
+					punchgs.TweenLite.set(api.find('.tp-giveeffect').parent(),{opacity:fade});
+					punchgs.TweenLite.set(api.find('.effect_wrapper'),{opacity:fade2});
+				}
+				newCall.inmodule = "parallax";
+				newCall.atposition = "start";
+
+
+				api.on("revolution.slide.onloaded",function (e) {
+					api.find('.slotholder').wrap('<div class="effect_wrapper"></div>');
+					api.revaddcallback(newCall);
+
+				});
+			}
+		});	/*ready*/
+	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.2/js/swiper.min.js"></script>
+	<script src="/front/page/index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
+	<script>
+	  $(document).ready(function() {
+	    $('[data-vbg]').youtube_background({
+	    	'fit-box':true
+	    }); 
+	  });
+	</script>
+</body>
+</html>

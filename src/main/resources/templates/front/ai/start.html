@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/front/common :: headSrc('AI PROMPT')">
+
+</head>
+<body class="stretched" data-menu-breakpoint="1200">
+	<div id="wrapper">
+		<section id="content" class="min-vh-100"
+		style="background:url('/front/images/bg_p.jpg'); background-repeat:no-repeat; background-size:cover; background-position:center;">
+			<div class="container">
+				<div class="ai-form-wrap min-vh-100">
+					<div class="row justify-content-between">
+						<div class="col-12">
+							<ul
+								class="process-steps row col-mb-30 justify-content-center mb-4">
+								<li class="col-sm-6 col-lg-2 active"><a href="#"
+									class="i-style rounded-circle i-alt mx-auto bg-color">1</a>
+									<h5>함께할 동물 선택</h5></li>
+								<li class="col-sm-6 col-lg-2"><a href="#"
+									class="i-style rounded-circle i-alt mx-auto">2</a>
+									<h5>동작에 대한 입력</h5></li>
+								<li class="col-sm-6 col-lg-2"><a href="#"
+									class="i-style rounded-circle i-alt mx-auto">3</a>
+									<h5>장소에 대한 입력</h5></li>
+								<li class="col-sm-6 col-lg-2"><a href="#"
+									class="i-style rounded-circle i-alt mx-auto">4</a>
+									<h5>환경에 대한 입력</h5></li>
+								<li class="col-sm-6 col-lg-2"><a href="#"
+									class="i-style rounded-circle i-alt mx-auto">5</a>
+									<h5>원하는 스타일 입력</h5></li>
+								<li class="col-sm-6 col-lg-2"><a href="#"
+									class="i-style rounded-circle i-alt mx-auto">6</a>
+									<h5>나만의 우표 생성</h5></li>		
+							</ul>
+						</div>
+						<div class="col-lg-8 mt-10">
+							
+							<form id="car-rental" class="row" action="#" method="post"
+								enctype="multipart/form-data">
+
+								<div class="col-12">
+									<label class="mb-0"># 함께할 동물우표를 선택 해 주세요 :</label><br>
+									<label># 선택한 동물우표를 AI가 어떻게 바꿔가는지 살펴봅시다.</label>
+									<div class="row car-list btn-group">
+										<label class="car-image pe-0 col-6 col-md-3">
+											<div class="ms-0">
+												<input type="radio" name="animal" class="required">
+												공룡(Dinosaur) <img src="/front/images/ai/d.png" alt="Image">
+											</div>
+										</label> <label class="car-image px-0 col-6 col-md-3">
+											<div>
+												<input type="radio" name="animal" class="required">
+												곰(Bear) <img src="/front/images/ai/b.png" alt="Image">
+											</div>
+										</label> <label class="car-image px-0 col-6 col-md-3">
+											<div class="ms-3 ms-md-2">
+												<input type="radio" name="animal" class="required">
+												늑대(Wolf) <img src="/front/images/ai/w.png" alt="Image">
+											</div>
+										</label> <label class="car-image px-0 col-6 col-md-3">
+											<div>
+												<input type="radio" name="animal" class="required">
+												독수리(Eagle) <img src="/front/images/ai/e.png" alt="Image">
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-12 text-center mt-5">
+									<button type="submit" 
+										class="btn btn-success btn-lg">주인공 생성하기</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-3 mt-3" style="margin-right:30px;">
+							
+							<form id="car-rental" class="row" action="#" method="post"
+								enctype="multipart/form-data">
+
+								<div class="col-12">
+									<label># 함께할 동물 AI Version : 곰(Bear)</label>
+									<div class="row car-list btn-group">
+										<img src="/front/images/bb.jpg" alt="Image">	
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<th:block th:replace="fragments/front/common :: scriptSrc"></th:block>
+
+</body>
+</html>

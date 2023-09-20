@@ -23699,7 +23699,7 @@ td.actions {
     left: 0;
     margin-left: calc(var(--cnvs-i-size) / -2);
     width: 50%;
-    border-top: 1px dashed var(--cnvs-contrast-300);
+    border-top: 2px dashed rgba(230,35,16,0.6);
   }
   .process-steps li::after {
     left: auto;
@@ -23714,7 +23714,7 @@ td.actions {
   .process-steps li .h5 {
     margin: 15px 0 0 0;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
